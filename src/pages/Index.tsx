@@ -3,10 +3,13 @@ import React, { useRef, useEffect } from 'react';
 import { Check, BarChart3, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const Index = () => {
   const phoneRef = useRef<HTMLDivElement>(null);
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  const isMobile = useIsMobile();
 
   // Simple animation on scroll
   useEffect(() => {
@@ -125,7 +128,7 @@ const Index = () => {
               <Banknote className="w-6 h-6 mr-2 text-indigo icon-glow" />
               ТАРИФЫ
             </h3>
-            <div className="overflow-x-auto">
+            <div className={`w-full ${isMobile ? 'text-xs' : 'text-sm'}`}>
               <table className="w-full text-left text-white/90 mt-4">
                 <tbody>
                   <tr className="border-b border-white/10">
@@ -154,52 +157,54 @@ const Index = () => {
               СРАВНЕНИЕ: ИИ VS ТАРГЕТОЛОГ
             </h3>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-white/90 mt-4">
-                <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="py-3"><strong>Показатель</strong></th>
-                    <th className="py-3"><strong>ИИ-Бот</strong></th>
-                    <th className="py-3"><strong>Обычный таргетолог</strong></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3">Стоимость в месяц</td>
-                    <td className="py-3 text-indigo">25 000 ₸</td>
-                    <td className="py-3">200 000 ₸</td>
-                  </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3">Время запуска</td>
-                    <td className="py-3 text-indigo">24 часа</td>
-                    <td className="py-3">5–10 дней</td>
-                  </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3">Ошибки и "забыл"</td>
-                    <td className="py-3 text-indigo">Нет</td>
-                    <td className="py-3">Часто</td>
-                  </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3">Скорость масштабирования</td>
-                    <td className="py-3 text-indigo">Мгновенно</td>
-                    <td className="py-3">Ручная работа</td>
-                  </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3">Доступ 24/7</td>
-                    <td className="py-3 text-indigo">Да</td>
-                    <td className="py-3">Нет</td>
-                  </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3">KPI-прозрачность</td>
-                    <td className="py-3 text-indigo">Да, вшито</td>
-                    <td className="py-3">Часто нет</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3">Человеческий фактор</td>
-                    <td className="py-3 text-indigo">Отсутствует</td>
-                    <td className="py-3">Всегда есть</td>
-                  </tr>
-                </tbody>
-              </table>
+              <ScrollArea className={`w-full ${isMobile ? 'h-[350px]' : ''}`}>
+                <table className="w-full text-left text-white/90 mt-4 min-w-[300px]">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="py-3"><strong>Показатель</strong></th>
+                      <th className="py-3"><strong>ИИ-Бот</strong></th>
+                      <th className="py-3"><strong>Обычный таргетолог</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-white/10">
+                      <td className="py-3">Стоимость в месяц</td>
+                      <td className="py-3 text-indigo">25 000 ₸</td>
+                      <td className="py-3">200 000 ₸</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-3">Время запуска</td>
+                      <td className="py-3 text-indigo">24 часа</td>
+                      <td className="py-3">5–10 дней</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-3">Ошибки и "забыл"</td>
+                      <td className="py-3 text-indigo">Нет</td>
+                      <td className="py-3">Часто</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-3">Скорость масштабирования</td>
+                      <td className="py-3 text-indigo">Мгновенно</td>
+                      <td className="py-3">Ручная работа</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-3">Доступ 24/7</td>
+                      <td className="py-3 text-indigo">Да</td>
+                      <td className="py-3">Нет</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="py-3">KPI-прозрачность</td>
+                      <td className="py-3 text-indigo">Да, вшито</td>
+                      <td className="py-3">Часто нет</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3">Человеческий фактор</td>
+                      <td className="py-3 text-indigo">Отсутствует</td>
+                      <td className="py-3">Всегда есть</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ScrollArea>
             </div>
           </section>
           
