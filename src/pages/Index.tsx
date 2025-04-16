@@ -1,6 +1,5 @@
-
 import React, { useRef, useEffect } from 'react';
-import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote } from 'lucide-react';
+import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -10,7 +9,10 @@ const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const isMobile = useIsMobile();
 
-  // Simple animation on scroll
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/77074094375', '_blank', 'noopener,noreferrer');
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -176,6 +178,7 @@ const Index = () => {
             </p>
             <div className="mt-6">
               <Button 
+                onClick={handleWhatsAppClick}
                 className="px-8 py-3 bg-indigo hover:bg-indigo-light transition-colors duration-300 rounded-lg font-bold tracking-wide btn-animated"
               >
                 Оставить заявку
