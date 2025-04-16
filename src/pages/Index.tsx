@@ -42,11 +42,11 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white subtle-bg-pattern">
       <div className="container mx-auto px-4 py-12 max-w-4xl proposal-container">
         <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
-            ИИ-Таргетолог — весь бюджет работает на вас
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
+            ИИ-Таргетолог
           </h1>
-          <h2 className="text-xl md:text-2xl mb-8 text-white/80">
-            Точные клиенты. Минимальные затраты.
+          <h2 className="text-2xl md:text-3xl mb-8 text-white/80">
+            Весь бюджет работает на вас
           </h2>
           <Separator className="w-1/4 mx-auto bg-indigo/50 h-[2px] mb-8" />
         </header>
