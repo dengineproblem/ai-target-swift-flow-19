@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -158,7 +159,7 @@ const Index = () => {
               ГАРАНТИИ
             </h3>
             <p className="mb-4 text-white/90">
-              <strong>Мы запускаем ИИ-таргетолога в течение 24 часов с момента внедрения.</strong>
+              <strong>Мы запускаем ИИ-таргетолога в течение 24 часов с момента оплаты.</strong>
             </p>
             <p className="text-white/90">
               <strong>Если этого не происходит — вернём деньги.</strong>
