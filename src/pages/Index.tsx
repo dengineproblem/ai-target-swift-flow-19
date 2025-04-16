@@ -43,10 +43,10 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12 max-w-4xl proposal-container">
         <header className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
-            ИИ-Таргетолог
+            Заменим вашего таргетолога на ИИ
           </h1>
           <h2 className="text-2xl md:text-3xl mb-8 text-white/80">
-            Весь бюджет работает на вас
+            Теперь весь бюджет будет работать на вас
           </h2>
           <Separator className="w-1/4 mx-auto bg-indigo/50 h-[2px] mb-8" />
         </header>
