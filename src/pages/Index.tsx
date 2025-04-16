@@ -1,9 +1,41 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Check, BarChart3, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
+  const phoneRef = useRef<HTMLDivElement>(null);
+  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+
+  // Simple animation on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            entry.target.classList.remove('opacity-0');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sectionsRef.current.forEach((section) => {
+      if (section) {
+        section.classList.add('opacity-0');
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sectionsRef.current.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white subtle-bg-pattern">
       <div className="container mx-auto px-4 py-12 max-w-4xl proposal-container">
@@ -17,7 +49,10 @@ const Index = () => {
           <Separator className="w-1/4 mx-auto bg-indigo/50 h-[2px] mb-8" />
         </header>
 
-        <div className="flex justify-center mb-16 transform hover:scale-[1.01] transition-transform duration-500">
+        <div 
+          ref={phoneRef} 
+          className="flex justify-center mb-16 phone-container transition-transform duration-500 hover:scale-[1.01]"
+        >
           <div className="border border-white/10 rounded-xl p-4 bg-black/50 shadow-[0_0_30px_rgba(30,58,138,0.1)]">
             <img 
               src="/lovable-uploads/e38c2fbe-9f4a-4e8b-a66e-afc1ff11665d.png" 
@@ -28,13 +63,19 @@ const Index = () => {
         </div>
         
         <div className="space-y-16">
-          <p className="text-xl text-center max-w-3xl mx-auto">
+          <p 
+            ref={(el) => (sectionsRef.current[0] = el)} 
+            className="text-xl text-center max-w-3xl mx-auto"
+          >
             <strong className="text-white">AI-таргетолог — это не просто бот, это революционная многоагентная система с искусственным интеллектом, которая берет на себя все функции дорогостоящего таргетолога и выполняет их круглосуточно с высочайшей точностью.</strong>
           </p>
           
-          <section className="proposal-section">
+          <section 
+            ref={(el) => (sectionsRef.current[1] = el)} 
+            className="proposal-section"
+          >
             <h3 className="proposal-section-title">
-              <RocketIcon className="w-6 h-6 mr-2 text-indigo" />
+              <RocketIcon className="w-6 h-6 mr-2 text-indigo icon-glow" />
               АВТОМАТИЧЕСКИЙ ЗАПУСК РЕКЛАМЫ БЕЗ ПОСРЕДНИКОВ
             </h3>
             <p className="mb-6 text-white/90"><strong>Просто отправьте ваш рекламный креатив в Telegram-бота, и система автоматически:</strong></p>
@@ -46,9 +87,12 @@ const Index = () => {
             </ul>
           </section>
           
-          <section className="proposal-section">
+          <section 
+            ref={(el) => (sectionsRef.current[2] = el)} 
+            className="proposal-section"
+          >
             <h3 className="proposal-section-title">
-              <Clock className="w-6 h-6 mr-2 text-indigo" />
+              <Clock className="w-6 h-6 mr-2 text-indigo icon-glow" />
               ЕЖЕДНЕВНАЯ ОПТИМИЗАЦИЯ, КОГДА ВЫ СПИТЕ
             </h3>
             <p className="mb-6 text-white/90"><strong>Каждую ночь, когда обычный таргетолог отдыхает, AI-система:</strong></p>
@@ -61,9 +105,12 @@ const Index = () => {
             </ul>
           </section>
           
-          <section className="proposal-section">
+          <section 
+            ref={(el) => (sectionsRef.current[3] = el)} 
+            className="proposal-section"
+          >
             <h3 className="proposal-section-title">
-              <BarChart3 className="w-6 h-6 mr-2 text-indigo" />
+              <BarChart3 className="w-6 h-6 mr-2 text-indigo icon-glow" />
               ДОСТУП К СТАТИСТИКЕ ОДНИМ КАСАНИЕМ
             </h3>
             <p className="mb-6 text-white/90"><strong>Вы получаете персональное мини-приложение в Telegram, разработанное специально для вашего бизнеса:</strong></p>
@@ -75,9 +122,12 @@ const Index = () => {
             </ul>
           </section>
           
-          <section className="proposal-section">
+          <section 
+            ref={(el) => (sectionsRef.current[4] = el)} 
+            className="proposal-section"
+          >
             <h3 className="proposal-section-title">
-              <Settings className="w-6 h-6 mr-2 text-indigo" />
+              <Settings className="w-6 h-6 mr-2 text-indigo icon-glow" />
               ПРОФЕССИОНАЛЬНЫЕ ИНСТРУМЕНТЫ В ОСНОВЕ СИСТЕМЫ
             </h3>
             <p className="mb-6 text-white/90"><strong>Мы заложили в AI-таргетолога все инструменты, которыми пользовались сами на протяжении 8 лет и опыта более 1 млн$ рекламного бюджета:</strong></p>
@@ -88,9 +138,12 @@ const Index = () => {
             </ul>
           </section>
           
-          <section className="proposal-section">
+          <section 
+            ref={(el) => (sectionsRef.current[5] = el)} 
+            className="proposal-section"
+          >
             <h3 className="proposal-section-title">
-              <BrainCircuit className="w-6 h-6 mr-2 text-indigo" />
+              <BrainCircuit className="w-6 h-6 mr-2 text-indigo icon-glow" />
               КРЕАТИВНЫЙ AI-ПОМОЩНИК В КОМПЛЕКТЕ
             </h3>
             <p className="mb-6 text-white/90"><strong>В дополнение к таргетингу вы получаете мощного AI-помощника для создания рекламных материалов:</strong></p>
@@ -103,9 +156,12 @@ const Index = () => {
             </ul>
           </section>
           
-          <section className="proposal-section">
+          <section 
+            ref={(el) => (sectionsRef.current[6] = el)} 
+            className="proposal-section"
+          >
             <h3 className="proposal-section-title">
-              <Sparkles className="w-6 h-6 mr-2 text-indigo" />
+              <Sparkles className="w-6 h-6 mr-2 text-indigo icon-glow" />
               ВСЕ ЭТО БЕЗ ЕЖЕМЕСЯЧНЫХ ПЛАТЕЖЕЙ ТАРГЕТОЛОГУ
             </h3>
             <p className="mb-6 text-white/90">
@@ -120,27 +176,32 @@ const Index = () => {
             </p>
           </section>
           
-          <section className="proposal-section">
+          <section 
+            ref={(el) => (sectionsRef.current[7] = el)} 
+            className="proposal-section"
+          >
             <h3 className="proposal-section-title">
-              <Banknote className="w-6 h-6 mr-2 text-indigo" />
+              <Banknote className="w-6 h-6 mr-2 text-indigo icon-glow" />
               СТОИМОСТЬ УСЛУГ
             </h3>
             <div className="flex flex-col sm:flex-row justify-center gap-8 mt-8">
-              <div className="price-container flex-1 text-center transform hover:scale-105 transition-transform duration-300">
+              <div className="price-container flex-1 text-center">
                 <p className="text-xl mb-2 text-white/80">Внедрение</p>
                 <p className="text-4xl font-bold text-indigo">50 000</p>
                 <p className="text-xl mt-1 text-indigo/80">тенге</p>
               </div>
-              <div className="price-container flex-1 text-center transform hover:scale-105 transition-transform duration-300">
+              <div className="price-container flex-1 text-center">
                 <p className="text-xl mb-2 text-white/80">Подписка</p>
                 <p className="text-4xl font-bold text-indigo">25 000</p>
                 <p className="text-sm mt-1 text-indigo/80">тенге в месяц</p>
               </div>
             </div>
             <div className="mt-8 text-center">
-              <button className="px-8 py-3 bg-indigo hover:bg-indigo-light transition-colors duration-300 rounded-lg font-bold tracking-wide">
+              <Button 
+                className="px-8 py-3 bg-indigo hover:bg-indigo-light transition-colors duration-300 rounded-lg font-bold tracking-wide btn-animated"
+              >
                 Связаться с нами
-              </button>
+              </Button>
             </div>
           </section>
         </div>

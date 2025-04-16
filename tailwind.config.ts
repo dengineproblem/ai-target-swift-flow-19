@@ -106,15 +106,43 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'glow-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px rgba(30, 58, 138, 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 15px rgba(30, 58, 138, 0.3)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)'
+					}
+				},
+				'shine': {
+					'0%': {
+						backgroundPosition: '-100% 0'
+					},
+					'100%': {
+						backgroundPosition: '200% 0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out'
+				'fade-in': 'fade-in 0.5s ease-out',
+				'glow-pulse': 'glow-pulse 4s infinite ease-in-out',
+				'float': 'float 6s infinite ease-in-out',
+				'shine': 'shine 8s infinite linear'
 			},
 			backgroundImage: {
 				'gradient-card': 'linear-gradient(to bottom, #222222, #111111)',
+				'radial-glow': 'radial-gradient(circle, rgba(30, 58, 138, 0.1) 0%, transparent 70%)'
 			}
 		}
 	},
