@@ -41,10 +41,10 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12 max-w-4xl proposal-container">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
-            КАК РАБОТАЕТ AI-ТАРГЕТОЛОГ ОТ PERFOMANTE
+            🧾 КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ
           </h1>
           <h2 className="text-xl md:text-2xl mb-8 text-white/80">
-            МНОГОАГЕНТНАЯ СИСТЕМА С ИСКУССТВЕННЫМ ИНТЕЛЛЕКТОМ, КОТОРАЯ ПОЛНОСТЬЮ ЗАМЕНЯЕТ ТАРГЕТОЛОГА
+            ИИ-Таргетолог — весь бюджет работает на вас.
           </h2>
           <Separator className="w-1/4 mx-auto bg-indigo/50 h-[2px] mb-8" />
         </header>
@@ -56,34 +56,48 @@ const Index = () => {
           <div className="border border-white/10 rounded-xl p-4 bg-black/50 shadow-[0_0_30px_rgba(30,58,138,0.1)]">
             <img 
               src="/lovable-uploads/e38c2fbe-9f4a-4e8b-a66e-afc1ff11665d.png" 
-              alt="AI-таргетолог интерфейс на телефоне" 
+              alt="ИИ-таргетолог интерфейс на телефоне" 
               className="max-w-full h-auto max-h-[80vh]"
             />
           </div>
         </div>
         
         <div className="space-y-16">
-          <p 
+          <section 
             ref={(el) => (sectionsRef.current[0] = el)} 
-            className="text-xl text-center max-w-3xl mx-auto"
+            className="proposal-section"
           >
-            <strong className="text-white">AI-таргетолог — это не просто бот, это революционная многоагентная система с искусственным интеллектом, которая берет на себя все функции дорогостоящего таргетолога и выполняет их круглосуточно с высочайшей точностью.</strong>
-          </p>
+            <h3 className="proposal-section-title">
+              <RocketIcon className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              ЧТО ЭТО?
+            </h3>
+            <p className="mb-6 text-white/90">
+              <strong>ИИ-система, которая полностью заменяет таргетолога. Вы платите только за рекламу — и весь бюджет работает на вас.</strong>
+            </p>
+            <p className="mb-4 text-white/90">
+              Как это устроено: каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки.
+            </p>
+            <p className="mb-4 text-white/90">
+              Чтобы запустить рекламу — достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости.
+            </p>
+            <p className="text-white/90">
+              В сравнении с человеком, AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах.
+            </p>
+          </section>
           
           <section 
             ref={(el) => (sectionsRef.current[1] = el)} 
             className="proposal-section"
           >
             <h3 className="proposal-section-title">
-              <RocketIcon className="w-6 h-6 mr-2 text-indigo icon-glow" />
-              АВТОМАТИЧЕСКИЙ ЗАПУСК РЕКЛАМЫ БЕЗ ПОСРЕДНИКОВ
+              <BrainCircuit className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              ДЛЯ КОГО?
             </h3>
-            <p className="mb-6 text-white/90"><strong>Просто отправьте ваш рекламный креатив в Telegram-бота, и система автоматически:</strong></p>
             <ul className="proposal-list">
-              <li><strong>Создаст рекламную кампанию с оптимальными настройками</strong></li>
-              <li><strong>Сформирует группы объявлений с правильной структурой</strong></li>
-              <li><strong>Разработает объявления на основе вашего креатива</strong></li>
-              <li><strong>Запустит их на следующий день в тестовом режиме с минимальным бюджетом</strong></li>
+              <li><strong>Для тех, кто хочет получать в 2,5 раза больше клиентов при тех же затратах на маркетинг.</strong></li>
+              <li><strong>Для тех, кто тратит 100–300 тыс. ₸ на рекламу и не понимает, зачем платить ещё столько же таргетологу</strong></li>
+              <li><strong>Для предпринимателей, которым надоело объяснять подрядчику очевидные вещи и ждать реакции по 3 дня</strong></li>
+              <li><strong>Для тех, кто сливает бюджет на непонятные кампании без отчётности и контроля</strong></li>
             </ul>
           </section>
           
@@ -92,16 +106,14 @@ const Index = () => {
             className="proposal-section"
           >
             <h3 className="proposal-section-title">
-              <Clock className="w-6 h-6 mr-2 text-indigo icon-glow" />
-              ЕЖЕДНЕВНАЯ ОПТИМИЗАЦИЯ, КОГДА ВЫ СПИТЕ
+              <Sparkles className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              ЧТО ВЫ ПОЛУЧИТЕ?
             </h3>
-            <p className="mb-6 text-white/90"><strong>Каждую ночь, когда обычный таргетолог отдыхает, AI-система:</strong></p>
             <ul className="proposal-list">
-              <li><strong>Собирает полный отчет за предыдущий день</strong></li>
-              <li><strong>Анализирует эффективность всех кампаний</strong></li>
-              <li><strong>Перераспределяет бюджет на лучшие объявления</strong></li>
-              <li><strong>Отключает неэффективные креативы</strong></li>
-              <li><strong>Корректирует ставки для снижения стоимости заявки</strong></li>
+              <li><strong>Запуск рекламных кампаний в 1 клик через Telegram</strong></li>
+              <li><strong>Ежедневная оптимизация и контроль бюджета</strong></li>
+              <li><strong>Сценарии для креативов, сгенерированные ИИ под ваш бизнес</strong></li>
+              <li><strong>Мини-приложение с прозрачной статистикой и управлением рекламой</strong></li>
             </ul>
           </section>
           
@@ -110,16 +122,27 @@ const Index = () => {
             className="proposal-section"
           >
             <h3 className="proposal-section-title">
-              <BarChart3 className="w-6 h-6 mr-2 text-indigo icon-glow" />
-              ДОСТУП К СТАТИСТИКЕ ОДНИМ КАСАНИЕМ
+              <Banknote className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              ТАРИФЫ
             </h3>
-            <p className="mb-6 text-white/90"><strong>Вы получаете персональное мини-приложение в Telegram, разработанное специально для вашего бизнеса:</strong></p>
-            <ul className="proposal-list">
-              <li><strong>Вся статистика в реальном времени</strong></li>
-              <li><strong>Удобные графики и диаграммы</strong></li>
-              <li><strong>Мгновенный доступ к данным в любое время суток</strong></li>
-              <li><strong>Интуитивно понятный интерфейс даже для тех, кто далек от рекламы</strong></li>
-            </ul>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-white/90 mt-4">
+                <tbody>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3"><strong>Внедрение (разово)</strong></td>
+                    <td className="py-3 text-indigo"><strong>50 000 ₸</strong></td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3"><strong>Подписка (с 2-го месяца)</strong></td>
+                    <td className="py-3 text-indigo"><strong>25 000 ₸ / мес</strong></td>
+                  </tr>
+                  <tr>
+                    <td className="py-3"><strong>Экономия в сравнении с таргетологом</strong></td>
+                    <td className="py-3 text-indigo"><strong>до 275 000 ₸ / мес</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
           
           <section 
@@ -127,15 +150,57 @@ const Index = () => {
             className="proposal-section"
           >
             <h3 className="proposal-section-title">
-              <Settings className="w-6 h-6 mr-2 text-indigo icon-glow" />
-              ПРОФЕССИОНАЛЬНЫЕ ИНСТРУМЕНТЫ В ОСНОВЕ СИСТЕМЫ
+              <BarChart3 className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              СРАВНЕНИЕ: ИИ VS ТАРГЕТОЛОГ
             </h3>
-            <p className="mb-6 text-white/90"><strong>Мы заложили в AI-таргетолога все инструменты, которыми пользовались сами на протяжении 8 лет и опыта более 1 млн$ рекламного бюджета:</strong></p>
-            <ul className="proposal-list">
-              <li><strong>Умное перераспределение бюджета между кампаниями</strong></li>
-              <li><strong>Автоматическое дублирование успешных кампаний</strong></li>
-              <li><strong>Мгновенная остановка неэффективных объявлений</strong></li>
-            </ul>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-white/90 mt-4">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="py-3"><strong>Показатель</strong></th>
+                    <th className="py-3"><strong>ИИ-Бот</strong></th>
+                    <th className="py-3"><strong>Обычный таргетолог</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Стоимость в месяц</td>
+                    <td className="py-3 text-indigo">25 000 ₸</td>
+                    <td className="py-3">200 000 ₸</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Время запуска</td>
+                    <td className="py-3 text-indigo">24 часа</td>
+                    <td className="py-3">5–10 дней</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Ошибки и "забыл"</td>
+                    <td className="py-3 text-indigo">Нет</td>
+                    <td className="py-3">Часто</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Скорость масштабирования</td>
+                    <td className="py-3 text-indigo">Мгновенно</td>
+                    <td className="py-3">Ручная работа</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Доступ 24/7</td>
+                    <td className="py-3 text-indigo">Да</td>
+                    <td className="py-3">Нет</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">KPI-прозрачность</td>
+                    <td className="py-3 text-indigo">Да, вшито</td>
+                    <td className="py-3">Часто нет</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3">Человеческий фактор</td>
+                    <td className="py-3 text-indigo">Отсутствует</td>
+                    <td className="py-3">Всегда есть</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
           
           <section 
@@ -143,64 +208,33 @@ const Index = () => {
             className="proposal-section"
           >
             <h3 className="proposal-section-title">
-              <BrainCircuit className="w-6 h-6 mr-2 text-indigo icon-glow" />
-              КРЕАТИВНЫЙ AI-ПОМОЩНИК В КОМПЛЕКТЕ
+              <Check className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              ГАРАНТИИ
             </h3>
-            <p className="mb-6 text-white/90"><strong>В дополнение к таргетингу вы получаете мощного AI-помощника для создания рекламных материалов:</strong></p>
-            <ul className="proposal-list">
-              <li><strong>У него есть вся информация о вашем бизнесе</strong></li>
-              <li><strong>База данных всех ваших успешных креативов</strong></li>
-              <li><strong>По одному текстовому запросу вы получаете готовый сценарий для рекламы</strong></li>
-              <li><strong>Просто снимите видео по сценарию или передайте задачу специалисту</strong></li>
-              <li><strong>Запустите через того же бота — и реклама готова!</strong></li>
-            </ul>
+            <p className="mb-4 text-white/90">
+              <strong>Мы запускаем ии-таргетолога в течение 24 рабочих дней с момента внедрения.</strong>
+            </p>
+            <p className="text-white/90">
+              <strong>Если этого не происходит — вернём деньги.</strong>
+            </p>
           </section>
           
           <section 
             ref={(el) => (sectionsRef.current[6] = el)} 
-            className="proposal-section"
+            className="proposal-section text-center"
           >
-            <h3 className="proposal-section-title">
-              <Sparkles className="w-6 h-6 mr-2 text-indigo icon-glow" />
-              ВСЕ ЭТО БЕЗ ЕЖЕМЕСЯЧНЫХ ПЛАТЕЖЕЙ ТАРГЕТОЛОГУ
+            <h3 className="proposal-section-title justify-center">
+              <MessageSquarePlus className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              КАК НАЧАТЬ
             </h3>
-            <p className="mb-6 text-white/90">
-              <strong>
-                Представьте: вместо того чтобы платить 250 000 тенге таргетологу, вы направляете эти деньги прямо в рекламный бюджет и получаете в 2,5 раза больше клиентов. AI-таргетолог работает круглосуточно, не устает, не болеет и не берет отпуск.
-              </strong>
+            <p className="mb-6 text-xl text-white/90">
+              <strong>👉 Оставьте заявку, и мы свяжемся с вами.</strong>
             </p>
-            <p className="mb-4 text-center text-xl font-semibold">
-              <strong className="text-indigo">
-                Ваша реклама наконец-то начинает работать на полную мощность.
-              </strong>
-            </p>
-          </section>
-          
-          <section 
-            ref={(el) => (sectionsRef.current[7] = el)} 
-            className="proposal-section"
-          >
-            <h3 className="proposal-section-title">
-              <Banknote className="w-6 h-6 mr-2 text-indigo icon-glow" />
-              СТОИМОСТЬ УСЛУГ
-            </h3>
-            <div className="flex flex-col sm:flex-row justify-center gap-8 mt-8">
-              <div className="price-container flex-1 text-center">
-                <p className="text-xl mb-2 text-white/80">Внедрение</p>
-                <p className="text-4xl font-bold text-indigo">50 000</p>
-                <p className="text-xl mt-1 text-indigo/80">тенге</p>
-              </div>
-              <div className="price-container flex-1 text-center">
-                <p className="text-xl mb-2 text-white/80">Подписка</p>
-                <p className="text-4xl font-bold text-indigo">25 000</p>
-                <p className="text-sm mt-1 text-indigo/80">тенге в месяц</p>
-              </div>
-            </div>
-            <div className="mt-8 text-center">
+            <div className="mt-6">
               <Button 
                 className="px-8 py-3 bg-indigo hover:bg-indigo-light transition-colors duration-300 rounded-lg font-bold tracking-wide btn-animated"
               >
-                Связаться с нами
+                Оставить заявку
               </Button>
             </div>
           </section>
