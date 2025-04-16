@@ -63,11 +63,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// New accent colors
+				// Updated accent colors
 				indigo: {
-					DEFAULT: '#1E3A8A',
-					light: '#3B578D',
-					dark: '#112153'
+					DEFAULT: '#1E3A8A', // Насыщенный тёмно-синий
+					light: '#2563EB', // Яркий, но не ядовитый
+					dark: '#004AAD' // Фирменный стиль «глубокий синий»
 				},
 				purple: {
 					DEFAULT: '#4F46E5',

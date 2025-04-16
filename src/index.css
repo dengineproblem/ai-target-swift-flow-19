@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -25,7 +24,7 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 226 85% 34%;
+    --accent: 220 79% 33%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +32,7 @@
 
     --border: 0 0% 20%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 226 85% 34%;
+    --ring: 220 79% 33%;
 
     --radius: 0.625rem;
 
@@ -99,6 +98,12 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
   }
+}
+
+/* Add utility for text wrapping */
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Animation Keyframes */
