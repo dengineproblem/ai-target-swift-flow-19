@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -131,19 +130,19 @@ const Index = () => {
               ТАРИФЫ
             </h3>
             <div className={`w-full ${isMobile ? 'text-xs' : 'text-sm'}`}>
-              <table className="w-full text-left text-white/90 mt-4">
+              <table className="w-full text-left text-white mt-4">
                 <tbody>
                   <tr className="border-b border-white/10">
                     <td className="py-3"><strong>Внедрение (разово)</strong></td>
-                    <td className="py-3 text-indigo"><strong>50 000 ₸</strong></td>
+                    <td className="py-3 text-white"><strong>25 000 ₸</strong></td>
                   </tr>
                   <tr className="border-b border-white/10">
                     <td className="py-3"><strong>Подписка (с 2-го месяца)</strong></td>
-                    <td className="py-3 text-indigo"><strong>25 000 ₸ / мес</strong></td>
+                    <td className="py-3 text-white"><strong>25 000 ₸ / мес</strong></td>
                   </tr>
                   <tr>
                     <td className="py-3"><strong>Экономия в сравнении с таргетологом</strong></td>
-                    <td className="py-3 text-indigo"><strong>до 275 000 ₸ / мес</strong></td>
+                    <td className="py-3 text-white"><strong>до 275 000 ₸ / мес</strong></td>
                   </tr>
                 </tbody>
               </table>
