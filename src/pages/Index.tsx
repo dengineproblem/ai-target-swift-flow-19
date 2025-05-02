@@ -9,8 +9,8 @@ const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const isMobile = useIsMobile();
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/77074094375', '_blank', 'noopener,noreferrer');
+  const handleButtonClick = () => {
+    window.open('https://n1147100.alteg.io', '_blank', 'noopener,noreferrer');
   };
 
   useEffect(() => {
@@ -178,10 +178,10 @@ const Index = () => {
             </p>
             <div className="mt-6">
               <Button 
-                onClick={handleWhatsAppClick}
+                onClick={handleButtonClick}
                 className="px-8 py-3 bg-indigo hover:bg-indigo-light transition-colors duration-300 rounded-lg font-bold tracking-wide btn-animated"
               >
-                Оставить заявку
+                Записаться на демонстрацию
               </Button>
             </div>
           </section>
