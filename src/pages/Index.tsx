@@ -43,12 +43,9 @@ const Index = () => {
 
   const timelineData = [
     {
-      title: "Шаг 1",
+      title: "Загрузка креатива",
       content: (
         <div>
-          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
-            <strong className="text-white">Загрузка креатива</strong>
-          </p>
           <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
             Вы загружаете видео через приложение в Telegram, выбираете все настройки и нажимаете кнопку "Запустить". 
             После этого автоматически создаются кампания, группа объявлений и объявления на ваш продукт.
@@ -57,12 +54,9 @@ const Index = () => {
       ),
     },
     {
-      title: "Шаг 2", 
+      title: "Мониторинг и управление", 
       content: (
         <div>
-          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
-            <strong className="text-white">Мониторинг и управление</strong>
-          </p>
           <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
             Вы следите за статистикой в приложении, можете самостоятельно выключать кампании в один клик, 
             включать их, а также управлять бюджетом и видеть графики за любой отчетный период.
@@ -71,12 +65,9 @@ const Index = () => {
       ),
     },
     {
-      title: "Шаг 3",
+      title: "Автопилот ИИ",
       content: (
         <div>
-          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
-            <strong className="text-white">Автопилот ИИ</strong>
-          </p>
           <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
             Вы можете доверить искусственному интеллекту управление бюджетом. Включите функцию "Автопилот" — 
             он будет ориентироваться на целевые показатели именно вашего бизнеса, не выходить за рамки 
@@ -86,20 +77,21 @@ const Index = () => {
       ),
     },
     {
-      title: "Шаг 4",
+      title: "Ежедневная отчетность",
       content: (
         <div>
-          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
-            <strong className="text-white">Ежедневная отчетность</strong>
-          </p>
-          <p className="text-white/60 text-xs md:text-sm font-normal mb-8">
+          <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
             Ежедневно после полуночи берется отчет с рекламного кабинета, и на основании целевых показателей 
             бизнеса производятся действия. Вы получаете утром в Telegram отчет со всеми ключевыми метриками 
             и выполненными действиями.
           </p>
-          <p className="text-white/80 text-xs md:text-sm font-normal mb-4">
-            <strong className="text-white">Бонус: Генерация креативов</strong>
-          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Генерация креативов",
+      content: (
+        <div>
           <p className="text-white/60 text-xs md:text-sm font-normal">
             Вы также можете попросить чат-бот написать новый сценарий креатива. У него будет вся информация 
             о вашем бизнесе, примеры форматов креативов, описаны все боли и сегменты целевых аудиторий. 
