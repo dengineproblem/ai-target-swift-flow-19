@@ -64,9 +64,9 @@ export const Timeline = ({
             style={{
               height: heightTransform,
               opacity: opacityTransform,
-              backgroundSize: '100% 200%'
+              backgroundSize: '100% 300%'
             }} 
-            className="absolute inset-x-0 top-0 w-[2px] bg-[linear-gradient(to_top,#a855f7_0%,#3b82f6_10%,#06b6d4_20%,#10b981_30%,#f59e0b_40%,#ef4444_50%,#ec4899_60%,#8b5cf6_70%,#3b82f6_80%,#06b6d4_90%,#a855f7_100%)] rounded-full animate-rainbow" />
+            className="absolute inset-x-0 top-0 w-[2px] bg-[linear-gradient(to_top,#a855f7_0%,#8b5cf6_5%,#3b82f6_10%,#2563eb_15%,#06b6d4_20%,#0891b2_25%,#10b981_30%,#059669_35%,#f59e0b_40%,#d97706_45%,#ef4444_50%,#dc2626_55%,#ec4899_60%,#db2777_65%,#8b5cf6_70%,#7c3aed_75%,#3b82f6_80%,#2563eb_85%,#06b6d4_90%,#0891b2_95%,#a855f7_100%)] rounded-full animate-rainbow" />
         </div>
       </div>
     </div>;
