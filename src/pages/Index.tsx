@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -6,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import { NoisePatternCard, NoisePatternCardBody } from '@/components/ui/card-with-noise-pattern';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
+import { cn } from '@/lib/utils';
 
 const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
@@ -56,30 +57,32 @@ const Index = () => {
         <div className="container mx-auto px-4 py-16 max-w-4xl relative z-10">
           
           <div className="space-y-12 mb-16">
-            <NoisePatternCard 
+            <section 
               ref={(el) => (sectionsRef.current[0] = el)}
-              className="opacity-0 border-white/[0.08] bg-black/40 backdrop-blur-sm"
+              className="opacity-0"
             >
-              <NoisePatternCardBody className="p-8">
-                <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight">
-                  ЧТО ЭТО?
-                </h3>
-                <div className="space-y-4 text-white/60 leading-relaxed">
-                  <p className="text-lg">
-                    <span className="text-white font-medium">ИИ-система, которая полностью заменяет таргетолога.</span> Вы платите только за рекламу — и весь бюджет работает на вас.
-                  </p>
-                  <p>
-                    Как это устроено: каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки.
-                  </p>
-                  <p>
-                    Чтобы запустить рекламу — достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости.
-                  </p>
-                  <p>
-                    В сравнении с человеком, AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах.
-                  </p>
-                </div>
-              </NoisePatternCardBody>
-            </NoisePatternCard>
+              <h3 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight text-center">
+                ЧТО ЭТО?
+              </h3>
+              <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-2 lg:gap-4">
+                <GridItem
+                  title="Что это"
+                  description="ИИ-система, которая полностью заменяет таргетолога. Вы платите только за рекламу — и весь бюджет работает на вас."
+                />
+                <GridItem
+                  title="Как это устроено"
+                  description="Каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки."
+                />
+                <GridItem
+                  title="Как запустить рекламу"
+                  description="Достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости."
+                />
+                <GridItem
+                  title="Сравнение с человеком"
+                  description="AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах."
+                />
+              </ul>
+            </section>
             
             <NoisePatternCard 
               ref={(el) => (sectionsRef.current[1] = el)}
@@ -229,6 +232,40 @@ const Index = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+interface GridItemProps {
+  title: string;
+  description: React.ReactNode;
+}
+
+const GridItem = ({ title, description }: GridItemProps) => {
+  return (
+    <li className="min-h-[14rem] list-none">
+      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={3}
+        />
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-black/80 p-6 shadow-sm md:p-6">
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            <div className="space-y-3">
+              <h3 className="pt-0.5 text-xl leading-[1.375rem] font-bold font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-white">
+                {title}
+              </h3>
+              <p className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-white/60">
+                {description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
   );
 };
 
