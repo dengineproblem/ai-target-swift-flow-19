@@ -62,7 +62,7 @@ export const Timeline = ({
           <motion.div style={{
           height: heightTransform,
           opacity: opacityTransform
-        }} className="absolute inset-x-0 top-0 w-[2px] bg-[repeating-linear-gradient(to_top,purple-500_0%,blue-500_20%,cyan-500_40%,purple-500_60%,blue-500_80%,cyan-500_100%)] rounded-full animate-rainbow" />
+        }} className="absolute inset-x-0 top-0 w-[2px] bg-[repeating-linear-gradient(to_top,#a855f7_0%,#3b82f6_20%,#06b6d4_40%,#a855f7_60%,#3b82f6_80%,#06b6d4_100%)] rounded-full animate-rainbow" />
         </div>
       </div>
     </div>;
