@@ -4,6 +4,8 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { Circle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { RainbowButton } from "./rainbow-button";
+
 function ElegantShape({
   className,
   delay = 0,
@@ -49,6 +51,7 @@ function ElegantShape({
             </motion.div>
         </motion.div>;
 }
+
 function HeroGeometric({
   badge = "Design Collective",
   title1 = "Elevate Your Digital Vision",
@@ -73,6 +76,11 @@ function HeroGeometric({
       }
     })
   };
+
+  const handleButtonClick = () => {
+    window.open('https://n1147100.alteg.io', '_blank', 'noopener,noreferrer');
+  };
+
   return <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
@@ -108,10 +116,17 @@ function HeroGeometric({
                     <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
                         <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed tracking-wide max-w-xl mx-auto px-4 font-light">и удвоим количество заявок при том же бюджете</p>
                     </motion.div>
+
+                    <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
+                        <RainbowButton onClick={handleButtonClick} className="text-lg px-8 py-3">
+                            Записаться на демонстрацию
+                        </RainbowButton>
+                    </motion.div>
                 </div>
             </div>
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
         </div>;
 }
+
 export { HeroGeometric };

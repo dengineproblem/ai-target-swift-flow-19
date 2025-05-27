@@ -1,4 +1,5 @@
 
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -73,7 +74,13 @@ export default {
 					DEFAULT: '#4F46E5',
 					light: '#6D66E9',
 					dark: '#3A33B0'
-				}
+				},
+				// Rainbow button colors
+				"color-1": "hsl(var(--color-1))",
+				"color-2": "hsl(var(--color-2))",
+				"color-3": "hsl(var(--color-3))",
+				"color-4": "hsl(var(--color-4))",
+				"color-5": "hsl(var(--color-5))",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -130,7 +137,11 @@ export default {
 					'100%': {
 						backgroundPosition: '200% 0'
 					}
-				}
+				},
+				rainbow: {
+					"0%": { "background-position": "0%" },
+					"100%": { "background-position": "200%" },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -138,7 +149,8 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out',
 				'glow-pulse': 'glow-pulse 4s infinite ease-in-out',
 				'float': 'float 6s infinite ease-in-out',
-				'shine': 'shine 8s infinite linear'
+				'shine': 'shine 8s infinite linear',
+				rainbow: "rainbow var(--speed, 2s) infinite linear",
 			},
 			backgroundImage: {
 				'gradient-card': 'linear-gradient(to bottom, #222222, #111111)',
@@ -148,3 +160,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
