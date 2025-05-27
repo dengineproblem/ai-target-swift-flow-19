@@ -65,16 +65,13 @@ export const Timeline = ({
               height: heightTransform,
               opacity: opacityTransform,
             }} 
-            className="absolute inset-x-0 top-0 w-[2px] rounded-full animate-rainbow"
+            className="relative w-[2px] animate-rainbow"
           >
-            {/* Rainbow gradient line */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_top,#a855f7_0%,#8b5cf6_3%,#3b82f6_6%,#2563eb_9%,#06b6d4_12%,#0891b2_15%,#10b981_18%,#059669_21%,#f59e0b_24%,#d97706_27%,#ef4444_30%,#dc2626_33%,#ec4899_36%,#db2777_39%,#8b5cf6_42%,#7c3aed_45%,#3b82f6_48%,#2563eb_51%,#06b6d4_54%,#0891b2_57%,#10b981_60%,#059669_63%,#f59e0b_66%,#d97706_69%,#ef4444_72%,#dc2626_75%,#ec4899_78%,#db2777_81%,#8b5cf6_84%,#7c3aed_87%,#3b82f6_90%,#2563eb_93%,#06b6d4_96%,#a855f7_100%)] bg-[length:100%_400%] rounded-full animate-rainbow" />
+            {/* Main rainbow gradient line with blur effect at bottom */}
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))] bg-[length:200%] animate-rainbow rounded-full" />
             
-            {/* Glowing effect */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_top,#a855f7_0%,#8b5cf6_3%,#3b82f6_6%,#2563eb_9%,#06b6d4_12%,#0891b2_15%,#10b981_18%,#059669_21%,#f59e0b_24%,#d97706_27%,#ef4444_30%,#dc2626_33%,#ec4899_36%,#db2777_39%,#8b5cf6_42%,#7c3aed_45%,#3b82f6_48%,#2563eb_51%,#06b6d4_54%,#0891b2_57%,#10b981_60%,#059669_63%,#f59e0b_66%,#d97706_69%,#ef4444_72%,#dc2626_75%,#ec4899_78%,#db2777_81%,#8b5cf6_84%,#7c3aed_87%,#3b82f6_90%,#2563eb_93%,#06b6d4_96%,#a855f7_100%)] bg-[length:100%_400%] rounded-full animate-rainbow blur-[2px] scale-110 opacity-60" />
-            
-            {/* Additional outer glow */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_top,#a855f7_0%,#8b5cf6_3%,#3b82f6_6%,#2563eb_9%,#06b6d4_12%,#0891b2_15%,#10b981_18%,#059669_21%,#f59e0b_24%,#d97706_27%,#ef4444_30%,#dc2626_33%,#ec4899_36%,#db2777_39%,#8b5cf6_42%,#7c3aed_45%,#3b82f6_48%,#2563eb_51%,#06b6d4_54%,#0891b2_57%,#10b981_60%,#059669_63%,#f59e0b_66%,#d97706_69%,#ef4444_72%,#dc2626_75%,#ec4899_78%,#db2777_81%,#8b5cf6_84%,#7c3aed_87%,#3b82f6_90%,#2563eb_93%,#06b6d4_96%,#a855f7_100%)] bg-[length:100%_400%] rounded-full animate-rainbow blur-[4px] scale-150 opacity-30" />
+            {/* Bottom blur glow effect like on the button */}
+            <div className="absolute bottom-[-20%] left-1/2 z-0 h-1/5 w-3/5 -translate-x-1/2 animate-rainbow bg-[linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))] bg-[length:200%] [filter:blur(calc(0.8*1rem))]" />
           </motion.div>
         </div>
       </div>
