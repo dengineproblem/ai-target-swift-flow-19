@@ -6,13 +6,16 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import { NoisePatternCard, NoisePatternCardBody } from '@/components/ui/card-with-noise-pattern';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
+import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import { cn } from '@/lib/utils';
+
 const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const isMobile = useIsMobile();
   const handleButtonClick = () => {
     window.open('https://n1147100.alteg.io', '_blank', 'noopener,noreferrer');
   };
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -36,6 +39,7 @@ const Index = () => {
       });
     };
   }, []);
+
   return <div className="min-h-screen bg-black text-white">
       <HeroGeometric badge="ИИ-таргетинг" title1="Заменим вашего таргетолога на ИИ" title2="и удвоим количество заявок при том же бюджете" />
       
@@ -54,6 +58,33 @@ const Index = () => {
                 <GridItem title="Сравнение с человеком" description="AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах." />
               </ul>
             </section>
+          </div>
+        </div>
+      </div>
+
+      {/* Video Section */}
+      <ScrollExpandMedia
+        mediaType="video"
+        mediaSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
+        bgImageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop"
+        title="Как работает ИИ-таргетинг"
+        scrollToExpand="Прокрутите для просмотра"
+      >
+        <div className='max-w-4xl mx-auto text-center'>
+          <h2 className='text-3xl font-bold mb-6 text-white'>
+            Демонстрация работы системы
+          </h2>
+          <p className='text-lg mb-8 text-white/80'>
+            Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени.
+          </p>
+        </div>
+      </ScrollExpandMedia>
+      
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
+        
+        <div className="container mx-auto px-4 py-16 max-w-4xl relative z-10">
+          <div className="space-y-12 mb-16">
             
             <NoisePatternCard ref={el => sectionsRef.current[1] = el} className="opacity-0 border-white/[0.08] bg-black/40 backdrop-blur-sm">
               <NoisePatternCardBody className="p-8">
@@ -186,6 +217,7 @@ const Index = () => {
       </div>
     </div>;
 };
+
 interface GridItemProps {
   title: string;
   description: React.ReactNode;
@@ -212,4 +244,5 @@ const GridItem = ({
       </div>
     </li>;
 };
+
 export default Index;
