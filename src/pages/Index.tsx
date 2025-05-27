@@ -1,12 +1,13 @@
+
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { HeroGeometric } from '@/components/ui/shape-landing-hero';
+import { NoisePatternCard, NoisePatternCardBody } from '@/components/ui/card-with-noise-pattern';
 
 const Index = () => {
-  const phoneRef = useRef<HTMLDivElement>(null);
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const isMobile = useIsMobile();
 
@@ -51,74 +52,70 @@ const Index = () => {
       
       <div className="subtle-bg-pattern">
         <div className="container mx-auto px-4 py-12 max-w-4xl proposal-container">
-          <div 
-            ref={phoneRef} 
-            className="flex justify-center mb-16 phone-container transition-transform duration-500 hover:scale-[1.01]"
-          >
-            <div className="border border-white/10 rounded-xl p-4 bg-black/50 shadow-[0_0_30px_rgba(30,58,138,0.1)]">
-              <img 
-                src="/lovable-uploads/e38c2fbe-9f4a-4e8b-a66e-afc1ff11665d.png" 
-                alt="ИИ-таргетолог интерфейс на телефоне" 
-                className="max-w-full h-auto max-h-[80vh]"
-              />
-            </div>
+          
+          <div className="space-y-8 mb-16">
+            <NoisePatternCard 
+              ref={(el) => (sectionsRef.current[0] = el)}
+              className="opacity-0"
+            >
+              <NoisePatternCardBody>
+                <h3 className="text-2xl font-bold mb-4 pb-2 border-b border-indigo/40 flex items-center text-white">
+                  <RocketIcon className="w-6 h-6 mr-2 text-indigo icon-glow" />
+                  ЧТО ЭТО?
+                </h3>
+                <p className="mb-6 text-white/90">
+                  <strong>ИИ-система, которая полностью заменяет таргетолога. Вы платите только за рекламу — и весь бюджет работает на вас.</strong>
+                </p>
+                <p className="mb-4 text-white/90">
+                  Как это устроено: каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки.
+                </p>
+                <p className="mb-4 text-white/90">
+                  Чтобы запустить рекламу — достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости.
+                </p>
+                <p className="text-white/90">
+                  В сравнении с человеком, AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах.
+                </p>
+              </NoisePatternCardBody>
+            </NoisePatternCard>
+            
+            <NoisePatternCard 
+              ref={(el) => (sectionsRef.current[1] = el)}
+              className="opacity-0"
+            >
+              <NoisePatternCardBody>
+                <h3 className="text-2xl font-bold mb-4 pb-2 border-b border-indigo/40 flex items-center text-white">
+                  <BrainCircuit className="w-6 h-6 mr-2 text-indigo icon-glow" />
+                  ДЛЯ КОГО?
+                </h3>
+                <ul className="proposal-list">
+                  <li><strong>Для тех, кто хочет получать в 2,5 раза больше клиентов при тех же затратах на маркетинг.</strong></li>
+                  <li><strong>Для тех, кто тратит 100–300 тыс. ₸ на рекламу и не понимает, зачем платить ещё столько же таргетологу</strong></li>
+                  <li><strong>Для предпринимателей, которым надоело объяснять подрядчику очевидные вещи и ждать реакции по 3 дня</strong></li>
+                  <li><strong>Для тех, кто сливает бюджет на непонятные кампании без отчётности и контроля</strong></li>
+                </ul>
+              </NoisePatternCardBody>
+            </NoisePatternCard>
+            
+            <NoisePatternCard 
+              ref={(el) => (sectionsRef.current[2] = el)}
+              className="opacity-0"
+            >
+              <NoisePatternCardBody>
+                <h3 className="text-2xl font-bold mb-4 pb-2 border-b border-indigo/40 flex items-center text-white">
+                  <Sparkles className="w-6 h-6 mr-2 text-indigo icon-glow" />
+                  ЧТО ВЫ ПОЛУЧИТЕ?
+                </h3>
+                <ul className="proposal-list">
+                  <li><strong>Запуск рекламных кампаний в 1 клик через Telegram</strong></li>
+                  <li><strong>Ежедневная оптимизация и контроль бюджета</strong></li>
+                  <li><strong>Сценарии для креативов, сгенерированные ИИ под ваш бизнес</strong></li>
+                  <li><strong>Мини-приложение с прозрачной статистикой и управлением рекламой</strong></li>
+                </ul>
+              </NoisePatternCardBody>
+            </NoisePatternCard>
           </div>
           
           <div className="space-y-16">
-            <section 
-              ref={(el) => (sectionsRef.current[0] = el)} 
-              className="proposal-section"
-            >
-              <h3 className="proposal-section-title">
-                <RocketIcon className="w-6 h-6 mr-2 text-indigo icon-glow" />
-                ЧТО ЭТО?
-              </h3>
-              <p className="mb-6 text-white/90">
-                <strong>ИИ-система, которая полностью заменяет таргетолога. Вы платите только за рекламу — и весь бюджет работает на вас.</strong>
-              </p>
-              <p className="mb-4 text-white/90">
-                Как это устроено: каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки.
-              </p>
-              <p className="mb-4 text-white/90">
-                Чтобы запустить рекламу — достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости.
-              </p>
-              <p className="text-white/90">
-                В сравнении с человеком, AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах.
-              </p>
-            </section>
-            
-            <section 
-              ref={(el) => (sectionsRef.current[1] = el)} 
-              className="proposal-section"
-            >
-              <h3 className="proposal-section-title">
-                <BrainCircuit className="w-6 h-6 mr-2 text-indigo icon-glow" />
-                ДЛЯ КОГО?
-              </h3>
-              <ul className="proposal-list">
-                <li><strong>Для тех, кто хочет получать в 2,5 раза больше клиентов при тех же затратах на маркетинг.</strong></li>
-                <li><strong>Для тех, кто тратит 100–300 тыс. ₸ на рекламу и не понимает, зачем платить ещё столько же таргетологу</strong></li>
-                <li><strong>Для предпринимателей, которым надоело объяснять подрядчику очевидные вещи и ждать реакции по 3 дня</strong></li>
-                <li><strong>Для тех, кто сливает бюджет на непонятные кампании без отчётности и контроля</strong></li>
-              </ul>
-            </section>
-            
-            <section 
-              ref={(el) => (sectionsRef.current[2] = el)} 
-              className="proposal-section"
-            >
-              <h3 className="proposal-section-title">
-                <Sparkles className="w-6 h-6 mr-2 text-indigo icon-glow" />
-                ЧТО ВЫ ПОЛУЧИТЕ?
-              </h3>
-              <ul className="proposal-list">
-                <li><strong>Запуск рекламных кампаний в 1 клик через Telegram</strong></li>
-                <li><strong>Ежедневная оптимизация и контроль бюджета</strong></li>
-                <li><strong>Сценарии для креативов, сгенерированные ИИ под ваш бизнес</strong></li>
-                <li><strong>Мини-приложение с прозрачной статистикой и управлением рекламой</strong></li>
-              </ul>
-            </section>
-            
             <section 
               ref={(el) => (sectionsRef.current[3] = el)} 
               className="proposal-section"
