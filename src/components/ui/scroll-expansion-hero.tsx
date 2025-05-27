@@ -210,9 +210,9 @@ const ScrollExpandMedia = ({
                           mediaSrc.includes('embed')
                             ? mediaSrc +
                               (mediaSrc.includes('?') ? '&' : '?') +
-                              `autoplay=${mediaFullyExpanded ? 1 : 0}&mute=${mediaFullyExpanded ? 0 : 1}&loop=1&controls=${mediaFullyExpanded ? 1 : 0}&showinfo=0&rel=0&disablekb=${mediaFullyExpanded ? 0 : 1}&modestbranding=1`
+                              `autoplay=1&mute=${mediaFullyExpanded ? 0 : 1}&loop=1&controls=${mediaFullyExpanded ? 1 : 0}&showinfo=0&rel=0&disablekb=${mediaFullyExpanded ? 0 : 1}&modestbranding=1`
                             : mediaSrc.replace('watch?v=', 'embed/') +
-                              `?autoplay=${mediaFullyExpanded ? 1 : 0}&mute=${mediaFullyExpanded ? 0 : 1}&loop=1&controls=${mediaFullyExpanded ? 1 : 0}&showinfo=0&rel=0&disablekb=${mediaFullyExpanded ? 0 : 1}&modestbranding=1&playlist=` +
+                              `?autoplay=1&mute=${mediaFullyExpanded ? 0 : 1}&loop=1&controls=${mediaFullyExpanded ? 1 : 0}&showinfo=0&rel=0&disablekb=${mediaFullyExpanded ? 0 : 1}&modestbranding=1&playlist=` +
                               mediaSrc.split('v=')[1]
                         }
                         className='w-full h-full rounded-xl'
