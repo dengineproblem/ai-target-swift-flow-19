@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useMotionValueEvent, useScroll, useTransform, motion } from "framer-motion";
@@ -63,7 +62,7 @@ export const Timeline = ({
           <motion.div style={{
           height: heightTransform,
           opacity: opacityTransform
-        }} className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-cyan-500 from-[0%] via-[30%] to-[60%] rounded-full animate-rainbow" />
+        }} className="absolute inset-x-0 top-0 w-[2px] bg-[repeating-linear-gradient(to_top,purple-500_0%,blue-500_20%,cyan-500_40%,purple-500_60%,blue-500_80%,cyan-500_100%)] rounded-full animate-rainbow" />
         </div>
       </div>
     </div>;
