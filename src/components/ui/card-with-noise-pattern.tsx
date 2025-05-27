@@ -1,6 +1,7 @@
 
 import { cn } from '@/lib/utils'
 import { motion } from "framer-motion"
+import React from "react"
 
 interface NoisePatternCardProps {
   children: React.ReactNode
@@ -9,14 +10,15 @@ interface NoisePatternCardProps {
   overlayClassName?: string
 }
 
-export function NoisePatternCard({ 
+export const NoisePatternCard = React.forwardRef<HTMLDivElement, NoisePatternCardProps>(({ 
   children, 
   className,
   patternClassName,
   overlayClassName
-}: NoisePatternCardProps) {
+}, ref) => {
   return (
     <motion.div
+      ref={ref}
       className={cn(
         "border w-full rounded-md overflow-hidden",
         "bg-zinc-950",
@@ -41,7 +43,9 @@ export function NoisePatternCard({
       </div>
     </motion.div>
   )
-}
+})
+
+NoisePatternCard.displayName = "NoisePatternCard"
 
 export function NoisePatternCardBody({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
