@@ -6,7 +6,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import { NoisePatternCard, NoisePatternCardBody } from '@/components/ui/card-with-noise-pattern';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
-import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
+import SimpleVideoSection from '@/components/ui/simple-video-section';
 import { cn } from '@/lib/utils';
 
 const Index = () => {
@@ -62,23 +62,12 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Video Section */}
-      <ScrollExpandMedia
-        mediaType="video"
-        mediaSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
-        bgImageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop"
-        title="Как работает ИИ-таргетинг"
-        scrollToExpand="Прокрутите для просмотра"
-      >
-        <div className='max-w-4xl mx-auto text-center'>
-          <h2 className='text-3xl font-bold mb-6 text-white'>
-            Демонстрация работы системы
-          </h2>
-          <p className='text-lg mb-8 text-white/80'>
-            Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени.
-          </p>
-        </div>
-      </ScrollExpandMedia>
+      {/* Simple Video Section */}
+      <SimpleVideoSection 
+        title="Демонстрация работы системы"
+        description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
+        videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
+      />
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
