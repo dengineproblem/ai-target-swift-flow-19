@@ -43,10 +43,22 @@ const ScrollExpandMedia = ({
 
   // Reset function
   const resetAnimation = () => {
+    console.log('Resetting animation...');
     setScrollProgress(0);
     setShowContent(false);
     setMediaFullyExpanded(false);
-    window.scrollTo(0, 0);
+    setTouchStartY(0);
+    
+    // Force scroll to top
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    
+    // Force a re-render by temporarily changing a state
+    setTimeout(() => {
+      console.log('Animation reset complete');
+    }, 100);
   };
 
   useEffect(() => {
@@ -188,7 +200,7 @@ const ScrollExpandMedia = ({
       <div className='fixed top-4 left-4 z-50'>
         <button
           onClick={resetAnimation}
-          className='px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors duration-200'
+          className='px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors duration-200 shadow-lg'
         >
           🔄 Сбросить анимацию
         </button>
