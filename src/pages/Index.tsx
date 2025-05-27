@@ -137,7 +137,7 @@ const Index = () => {
                     <td className="py-3 text-white"><strong>25 000 ₸</strong></td>
                   </tr>
                   <tr className="border-b border-white/10">
-                    <td className="py-3"><strong>Подписка (с 2-го месяца)</strong></td>
+                    <td className="py-3"><strong>Подписка (ежемесячно)</strong></td>
                     <td className="py-3 text-white"><strong>25 000 ₸ / мес</strong></td>
                   </tr>
                   <tr>
