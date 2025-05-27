@@ -1,4 +1,3 @@
-
 'use client';
 
 import {
@@ -41,6 +40,19 @@ const ScrollExpandMedia = ({
   const [isMobileState, setIsMobileState] = useState<boolean>(false);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  // Reset function
+  const resetAnimation = () => {
+    setScrollProgress(0);
+    setShowContent(false);
+    setMediaFullyExpanded(false);
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    // Reset on component mount (page refresh)
+    resetAnimation();
+  }, []);
 
   useEffect(() => {
     setScrollProgress(0);
@@ -172,6 +184,16 @@ const ScrollExpandMedia = ({
       ref={sectionRef}
       className='transition-colors duration-700 ease-in-out overflow-x-hidden'
     >
+      {/* Reset Button */}
+      <div className='fixed top-4 left-4 z-50'>
+        <button
+          onClick={resetAnimation}
+          className='px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors duration-200'
+        >
+          🔄 Сбросить анимацию
+        </button>
+      </div>
+
       <section className='relative flex flex-col items-center justify-start min-h-[100dvh]'>
         <div className='relative w-full flex flex-col items-center min-h-[100dvh]'>
           <motion.div
