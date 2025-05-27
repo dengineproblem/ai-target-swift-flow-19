@@ -3,10 +3,13 @@
 
 import { useMotionValueEvent, useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { GlowingEffect } from "./glowing-effect";
+
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
 }
+
 export const Timeline = ({
   data
 }: {
@@ -15,20 +18,24 @@ export const Timeline = ({
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+
   useEffect(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
       setHeight(rect.height);
     }
   }, [ref]);
+
   const {
     scrollYProgress
   } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"]
   });
+
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+
   return <div className="w-full bg-black dark:bg-neutral-950 font-sans md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
@@ -57,22 +64,31 @@ export const Timeline = ({
               {item.content}{" "}
             </div>
           </div>)}
-        <div style={{
-        height: height + "px"
-      }} className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-white/20 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] ">
-          <motion.div 
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }} 
-            className="relative w-[2px] animate-rainbow"
-          >
-            {/* Main rainbow gradient line with blur effect at bottom */}
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))] bg-[length:200%] animate-rainbow rounded-full" />
-            
-            {/* Bottom blur glow effect like on the button */}
-            <div className="absolute bottom-[-20%] left-1/2 z-0 h-1/5 w-3/5 -translate-x-1/2 animate-rainbow bg-[linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))] bg-[length:200%] [filter:blur(calc(0.8*1rem))]" />
-          </motion.div>
+        
+        {/* Timeline line with glowing border effect */}
+        <div className="absolute md:left-8 left-8 top-0 w-[4px] h-full">
+          <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-0.5">
+            <GlowingEffect 
+              spread={40} 
+              glow={true} 
+              disabled={false} 
+              proximity={64} 
+              inactiveZone={0.01} 
+              borderWidth={3} 
+            />
+            <div 
+              style={{ height: height + "px" }} 
+              className="relative overflow-hidden w-full bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-white/20 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] rounded-xl border-[0.75px] bg-black/80"
+            >
+              <motion.div 
+                style={{
+                  height: heightTransform,
+                  opacity: opacityTransform,
+                }} 
+                className="relative w-full bg-gradient-to-b from-indigo-500/60 via-purple-500/60 to-cyan-500/60 rounded-xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>;
