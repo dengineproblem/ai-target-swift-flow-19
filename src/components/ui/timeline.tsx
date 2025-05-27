@@ -60,13 +60,13 @@ export const Timeline = ({
         <div style={{
         height: height + "px"
       }} className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-white/20 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] ">
-          <motion.div style={{
-          height: heightTransform,
-          opacity: opacityTransform
-        }} className="absolute inset-x-0 top-0 w-[2px] bg-[linear-gradient(to_top,#a855f7_0%,#3b82f6_10%,#06b6d4_20%,#10b981_30%,#f59e0b_40%,#ef4444_50%,#ec4899_60%,#8b5cf6_70%,#3b82f6_80%,#06b6d4_90%,#a855f7_100%)] rounded-full animate-rainbow" 
-        style={{
-          backgroundSize: '100% 200%'
-        }} />
+          <motion.div 
+            style={{
+              height: heightTransform,
+              opacity: opacityTransform,
+              backgroundSize: '100% 200%'
+            }} 
+            className="absolute inset-x-0 top-0 w-[2px] bg-[linear-gradient(to_top,#a855f7_0%,#3b82f6_10%,#06b6d4_20%,#10b981_30%,#f59e0b_40%,#ef4444_50%,#ec4899_60%,#8b5cf6_70%,#3b82f6_80%,#06b6d4_90%,#a855f7_100%)] rounded-full animate-rainbow" />
         </div>
       </div>
     </div>;
