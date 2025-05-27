@@ -202,7 +202,7 @@ const ScrollExpandMedia = ({
               >
                 {mediaType === 'video' ? (
                   mediaSrc.includes('youtube.com') ? (
-                    <div className='relative w-full h-full pointer-events-none'>
+                    <div className='relative w-full h-full'>
                       <iframe
                         width='100%'
                         height='100%'
@@ -210,20 +210,17 @@ const ScrollExpandMedia = ({
                           mediaSrc.includes('embed')
                             ? mediaSrc +
                               (mediaSrc.includes('?') ? '&' : '?') +
-                              'autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1'
+                              `autoplay=${mediaFullyExpanded ? 1 : 0}&mute=${mediaFullyExpanded ? 0 : 1}&loop=1&controls=${mediaFullyExpanded ? 1 : 0}&showinfo=0&rel=0&disablekb=${mediaFullyExpanded ? 0 : 1}&modestbranding=1`
                             : mediaSrc.replace('watch?v=', 'embed/') +
-                              '?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playlist=' +
+                              `?autoplay=${mediaFullyExpanded ? 1 : 0}&mute=${mediaFullyExpanded ? 0 : 1}&loop=1&controls=${mediaFullyExpanded ? 1 : 0}&showinfo=0&rel=0&disablekb=${mediaFullyExpanded ? 0 : 1}&modestbranding=1&playlist=` +
                               mediaSrc.split('v=')[1]
                         }
                         className='w-full h-full rounded-xl'
                         frameBorder='0'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                         allowFullScreen
+                        style={{ pointerEvents: mediaFullyExpanded ? 'auto' : 'none' }}
                       />
-                      <div
-                        className='absolute inset-0 z-10'
-                        style={{ pointerEvents: 'none' }}
-                      ></div>
 
                       <motion.div
                         className='absolute inset-0 bg-black/30 rounded-xl'
@@ -233,30 +230,28 @@ const ScrollExpandMedia = ({
                       />
                     </div>
                   ) : (
-                    <div className='relative w-full h-full pointer-events-none'>
+                    <div className='relative w-full h-full'>
                       <video
                         src={mediaSrc}
                         poster={posterSrc}
                         autoPlay
-                        muted
+                        muted={!mediaFullyExpanded}
                         loop
                         playsInline
                         preload='auto'
                         className='w-full h-full object-cover rounded-xl'
-                        controls={false}
-                        disablePictureInPicture
-                        disableRemotePlayback
+                        controls={mediaFullyExpanded}
+                        disablePictureInPicture={!mediaFullyExpanded}
+                        disableRemotePlayback={!mediaFullyExpanded}
+                        style={{ pointerEvents: mediaFullyExpanded ? 'auto' : 'none' }}
                       />
-                      <div
-                        className='absolute inset-0 z-10'
-                        style={{ pointerEvents: 'none' }}
-                      ></div>
 
                       <motion.div
                         className='absolute inset-0 bg-black/30 rounded-xl'
                         initial={{ opacity: 0.7 }}
                         animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
                         transition={{ duration: 0.2 }}
+                        style={{ pointerEvents: 'none' }}
                       />
                     </div>
                   )
