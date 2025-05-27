@@ -7,6 +7,7 @@ import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import { NoisePatternCard, NoisePatternCardBody } from '@/components/ui/card-with-noise-pattern';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import SimpleVideoSection from '@/components/ui/simple-video-section';
+import { Timeline } from '@/components/ui/timeline';
 import { cn } from '@/lib/utils';
 
 const Index = () => {
@@ -40,6 +41,75 @@ const Index = () => {
     };
   }, []);
 
+  const timelineData = [
+    {
+      title: "Шаг 1",
+      content: (
+        <div>
+          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
+            <strong className="text-white">Загрузка креатива</strong>
+          </p>
+          <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
+            Вы загружаете видео через приложение в Telegram, выбираете все настройки и нажимаете кнопку "Запустить". 
+            После этого автоматически создаются кампания, группа объявлений и объявления на ваш продукт.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Шаг 2", 
+      content: (
+        <div>
+          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
+            <strong className="text-white">Мониторинг и управление</strong>
+          </p>
+          <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
+            Вы следите за статистикой в приложении, можете самостоятельно выключать кампании в один клик, 
+            включать их, а также управлять бюджетом и видеть графики за любой отчетный период.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Шаг 3",
+      content: (
+        <div>
+          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
+            <strong className="text-white">Автопилот ИИ</strong>
+          </p>
+          <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
+            Вы можете доверить искусственному интеллекту управление бюджетом. Включите функцию "Автопилот" — 
+            он будет ориентироваться на целевые показатели именно вашего бизнеса, не выходить за рамки 
+            обговоренного дневного бюджета и автоматически перераспределять бюджет в сторону более эффективных кампаний.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Шаг 4",
+      content: (
+        <div>
+          <p className="text-white/80 text-xs md:text-sm font-normal mb-8">
+            <strong className="text-white">Ежедневная отчетность</strong>
+          </p>
+          <p className="text-white/60 text-xs md:text-sm font-normal mb-8">
+            Ежедневно после полуночи берется отчет с рекламного кабинета, и на основании целевых показателей 
+            бизнеса производятся действия. Вы получаете утром в Telegram отчет со всеми ключевыми метриками 
+            и выполненными действиями.
+          </p>
+          <p className="text-white/80 text-xs md:text-sm font-normal mb-4">
+            <strong className="text-white">Бонус: Генерация креативов</strong>
+          </p>
+          <p className="text-white/60 text-xs md:text-sm font-normal">
+            Вы также можете попросить чат-бот написать новый сценарий креатива. У него будет вся информация 
+            о вашем бизнесе, примеры форматов креативов, описаны все боли и сегменты целевых аудиторий. 
+            Это делает его способным писать максимально релевантные креативы для вашей аудитории.
+          </p>
+        </div>
+      ),
+    },
+  ];
+
   return <div className="min-h-screen bg-black text-white">
       <HeroGeometric badge="ИИ-таргетинг" title1="Заменим вашего таргетолога на ИИ" title2="и удвоим количество заявок при том же бюджете" />
       
@@ -68,6 +138,9 @@ const Index = () => {
         description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
         videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
       />
+
+      {/* Timeline Section */}
+      <Timeline data={timelineData} />
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
