@@ -50,67 +50,108 @@ const Index = () => {
         title2="и удвоим количество заявок при том же бюджете"
       />
       
-      <div className="subtle-bg-pattern">
-        <div className="container mx-auto px-4 py-12 max-w-4xl proposal-container">
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
+        
+        <div className="container mx-auto px-4 py-16 max-w-4xl relative z-10">
           
-          <div className="space-y-8 mb-16">
+          <div className="space-y-12 mb-16">
             <NoisePatternCard 
               ref={(el) => (sectionsRef.current[0] = el)}
-              className="opacity-0"
+              className="opacity-0 border-white/[0.08] bg-black/40 backdrop-blur-sm"
             >
-              <NoisePatternCardBody>
-                <h3 className="text-2xl font-bold mb-4 pb-2 border-b border-indigo/40 flex items-center text-white">
-                  <RocketIcon className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              <NoisePatternCardBody className="p-8">
+                <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight">
                   ЧТО ЭТО?
                 </h3>
-                <p className="mb-6 text-white/90">
-                  <strong>ИИ-система, которая полностью заменяет таргетолога. Вы платите только за рекламу — и весь бюджет работает на вас.</strong>
-                </p>
-                <p className="mb-4 text-white/90">
-                  Как это устроено: каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки.
-                </p>
-                <p className="mb-4 text-white/90">
-                  Чтобы запустить рекламу — достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости.
-                </p>
-                <p className="text-white/90">
-                  В сравнении с человеком, AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах.
-                </p>
+                <div className="space-y-4 text-white/60 leading-relaxed">
+                  <p className="text-lg">
+                    <span className="text-white font-medium">ИИ-система, которая полностью заменяет таргетолога.</span> Вы платите только за рекламу — и весь бюджет работает на вас.
+                  </p>
+                  <p>
+                    Как это устроено: каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки.
+                  </p>
+                  <p>
+                    Чтобы запустить рекламу — достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости.
+                  </p>
+                  <p>
+                    В сравнении с человеком, AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах.
+                  </p>
+                </div>
               </NoisePatternCardBody>
             </NoisePatternCard>
             
             <NoisePatternCard 
               ref={(el) => (sectionsRef.current[1] = el)}
-              className="opacity-0"
+              className="opacity-0 border-white/[0.08] bg-black/40 backdrop-blur-sm"
             >
-              <NoisePatternCardBody>
-                <h3 className="text-2xl font-bold mb-4 pb-2 border-b border-indigo/40 flex items-center text-white">
-                  <BrainCircuit className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              <NoisePatternCardBody className="p-8">
+                <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight">
                   ДЛЯ КОГО?
                 </h3>
-                <ul className="proposal-list">
-                  <li><strong>Для тех, кто хочет получать в 2,5 раза больше клиентов при тех же затратах на маркетинг.</strong></li>
-                  <li><strong>Для тех, кто тратит 100–300 тыс. ₸ на рекламу и не понимает, зачем платить ещё столько же таргетологу</strong></li>
-                  <li><strong>Для предпринимателей, которым надоело объяснять подрядчику очевидные вещи и ждать реакции по 3 дня</strong></li>
-                  <li><strong>Для тех, кто сливает бюджет на непонятные кампании без отчётности и контроля</strong></li>
-                </ul>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Для тех, кто хочет получать в 2,5 раза больше клиентов при тех же затратах на маркетинг.</span>
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Для тех, кто тратит 100–300 тыс. ₸ на рекламу и не понимает, зачем платить ещё столько же таргетологу</span>
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Для предпринимателей, которым надоело объяснять подрядчику очевидные вещи и ждать реакции по 3 дня</span>
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Для тех, кто сливает бюджет на непонятные кампании без отчётности и контроля</span>
+                    </p>
+                  </div>
+                </div>
               </NoisePatternCardBody>
             </NoisePatternCard>
             
             <NoisePatternCard 
               ref={(el) => (sectionsRef.current[2] = el)}
-              className="opacity-0"
+              className="opacity-0 border-white/[0.08] bg-black/40 backdrop-blur-sm"
             >
-              <NoisePatternCardBody>
-                <h3 className="text-2xl font-bold mb-4 pb-2 border-b border-indigo/40 flex items-center text-white">
-                  <Sparkles className="w-6 h-6 mr-2 text-indigo icon-glow" />
+              <NoisePatternCardBody className="p-8">
+                <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight">
                   ЧТО ВЫ ПОЛУЧИТЕ?
                 </h3>
-                <ul className="proposal-list">
-                  <li><strong>Запуск рекламных кампаний в 1 клик через Telegram</strong></li>
-                  <li><strong>Ежедневная оптимизация и контроль бюджета</strong></li>
-                  <li><strong>Сценарии для креативов, сгенерированные ИИ под ваш бизнес</strong></li>
-                  <li><strong>Мини-приложение с прозрачной статистикой и управлением рекламой</strong></li>
-                </ul>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Запуск рекламных кампаний в 1 клик через Telegram</span>
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Ежедневная оптимизация и контроль бюджета</span>
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Сценарии для креативов, сгенерированные ИИ под ваш бизнес</span>
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
+                    <p className="text-white/60 leading-relaxed">
+                      <span className="text-white font-medium">Мини-приложение с прозрачной статистикой и управлением рекламой</span>
+                    </p>
+                  </div>
+                </div>
               </NoisePatternCardBody>
             </NoisePatternCard>
           </div>
