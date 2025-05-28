@@ -157,7 +157,7 @@
 }
 
 .proposal-section {
-  @apply mb-12 p-6 border border-white/10 rounded-xl bg-gradient-to-br from-black/50 to-gray-900/30 transition-all duration-300;
+  @apply mb-12 p-6 border border-white/10 rounded-xl bg-gradient-card transition-all duration-300;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -196,7 +196,7 @@
 }
 
 .proposal-section-title {
-  @apply text-2xl font-bold mb-4 pb-2 border-b border-indigo-500/40 flex items-center;
+  @apply text-2xl font-bold mb-4 pb-2 border-b border-indigo/40 flex items-center;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -206,7 +206,7 @@
 
 .proposal-section-title:after {
   content: '';
-  @apply block ml-2 h-[2px] flex-grow bg-gradient-to-r from-indigo-500 to-transparent;
+  @apply block ml-2 h-[2px] flex-grow bg-gradient-to-r from-indigo to-transparent;
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
@@ -226,17 +226,17 @@
 
 .proposal-list li:before {
   content: '';
-  @apply block w-2 h-2 mr-3 mt-2 bg-indigo-500 rounded-sm shrink-0;
+  @apply block w-2 h-2 mr-3 mt-2 bg-indigo rounded-sm shrink-0;
   transition: all 0.2s ease-in-out;
 }
 
 .proposal-list li:hover:before {
-  @apply bg-indigo-400;
+  @apply bg-indigo-light;
   transform: scale(1.2);
 }
 
 .price-container {
-  @apply p-5 border-2 border-indigo-500/30 rounded-xl hover:border-indigo-500/50 transition-all duration-300 bg-black/50;
+  @apply p-5 border-2 border-indigo/30 rounded-xl hover:border-indigo/50 transition-all duration-300 bg-black/50;
   position: relative;
   overflow: hidden;
 }
@@ -359,3 +359,4 @@ html, body {
     transition: none !important;
   }
 }
+
