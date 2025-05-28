@@ -26,7 +26,7 @@ export const Card = React.memo(
       <img
         src={card.src}
         alt={card.title}
-        className="object-cover absolute inset-0 w-full h-full"
+        className="object-contain w-full h-full" // Changed from object-cover to object-contain
       />
       <div
         className={cn(
