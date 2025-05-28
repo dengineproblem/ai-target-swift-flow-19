@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -164,6 +165,13 @@ const Index = () => {
   return <div className="min-h-screen bg-black text-white">
       <HeroGeometric badge="ИИ-таргетинг" title1="Заменим вашего таргетолога на ИИ" title2="и удвоим количество заявок при том же бюджете" />
       
+      {/* Simple Video Section */}
+      <SimpleVideoSection 
+        title="Демонстрация работы системы"
+        description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
+        videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
+      />
+
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
         
@@ -182,13 +190,6 @@ const Index = () => {
           </div>
         </div>
       </div>
-
-      {/* Simple Video Section */}
-      <SimpleVideoSection 
-        title="Демонстрация работы системы"
-        description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
-        videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
-      />
 
       {/* Timeline Section */}
       <Timeline data={timelineData} />
@@ -212,6 +213,9 @@ const Index = () => {
           <StaggerTestimonials />
         </div>
       </section>
+
+      {/* Client Reports Section */}
+      <ClientReports />
 
       {/* Pricing Section */}
       <section className="relative overflow-hidden bg-black text-white">
@@ -267,9 +271,6 @@ const Index = () => {
 
       {/* Comparison Dashboard */}
       <ComparisonDashboard />
-
-      {/* Client Reports Section */}
-      <ClientReports />
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
