@@ -197,6 +197,9 @@ const Index = () => {
       {/* Timeline Section - Как работает ИИ-таргетолог */}
       <Timeline data={timelineData} />
 
+      {/* Client Reports Section - Результаты наших клиентов */}
+      <ClientReports />
+
       {/* Logos Section - 50+ компаний уже доверились нам */}
       <div className="bg-black">
         <Logos3 {...logoData} />
@@ -216,9 +219,6 @@ const Index = () => {
           <StaggerTestimonials />
         </div>
       </section>
-
-      {/* Client Reports Section - Результаты наших клиентов */}
-      <ClientReports />
 
       {/* Pricing Section - Тарифы */}
       <section className="relative overflow-hidden bg-black text-white">
