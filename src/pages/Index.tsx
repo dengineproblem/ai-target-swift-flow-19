@@ -10,6 +10,7 @@ import SimpleVideoSection from '@/components/ui/simple-video-section';
 import { Timeline } from '@/components/ui/timeline';
 import { PricingCard } from '@/components/ui/dark-gradient-pricing';
 import { ComparisonDashboard } from '@/components/ui/comparison-dashboard';
+import ClientReports from '@/components/ui/client-reports';
 import { cn } from '@/lib/utils';
 
 const Index = () => {
@@ -190,6 +191,9 @@ const Index = () => {
 
       {/* Comparison Dashboard */}
       <ComparisonDashboard />
+
+      {/* Client Reports Section */}
+      <ClientReports />
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
