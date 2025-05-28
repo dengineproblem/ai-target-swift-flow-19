@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -8,6 +9,7 @@ import { NoisePatternCard, NoisePatternCardBody } from '@/components/ui/card-wit
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import SimpleVideoSection from '@/components/ui/simple-video-section';
 import { Timeline } from '@/components/ui/timeline';
+import { PricingCard } from '@/components/ui/dark-gradient-pricing';
 import { cn } from '@/lib/utils';
 
 const Index = () => {
@@ -133,6 +135,58 @@ const Index = () => {
 
       {/* Timeline Section */}
       <Timeline data={timelineData} />
+
+      {/* Pricing Section */}
+      <section className="relative overflow-hidden bg-black text-white">
+        <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 md:px-8">
+          <div className="mb-12 space-y-3">
+            <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight text-white">
+              Тарифы
+            </h2>
+            <p className="text-center text-base text-white/60 md:text-lg">
+              Выберите подходящий пакет для вашего бизнеса
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <PricingCard
+              tier="3 месяца"
+              price="120.000 ₸"
+              bestFor="40.000 ₸ в месяц"
+              CTA="Выбрать пакет"
+              benefits={[
+                { text: "AI-агент для написания сценариев для креативов", checked: true },
+                { text: "Доступ к мини-приложению в Telegram", checked: true },
+                { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                { text: "Курс по таргетированной рекламе для предпринимателей", checked: false },
+              ]}
+            />
+            <PricingCard
+              tier="6 месяцев"
+              price="210.000 ₸"
+              bestFor="35.000 ₸ в месяц"
+              CTA="Выбрать пакет"
+              benefits={[
+                { text: "AI-агент для написания сценариев для креативов", checked: true },
+                { text: "Доступ к мини-приложению в Telegram", checked: true },
+                { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                { text: "Курс по таргетированной рекламе для предпринимателей", checked: false },
+              ]}
+            />
+            <PricingCard
+              tier="12 месяцев"
+              price="300.000 ₸"
+              bestFor="25.000 ₸ в месяц"
+              CTA="Выбрать пакет"
+              benefits={[
+                { text: "AI-агент для написания сценариев для креативов", checked: true },
+                { text: "Доступ к мини-приложению в Telegram", checked: true },
+                { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                { text: "Курс по таргетированной рекламе для предпринимателей", checked: true },
+              ]}
+            />
+          </div>
+        </div>
+      </section>
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
