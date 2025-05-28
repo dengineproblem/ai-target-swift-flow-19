@@ -7,28 +7,28 @@ import { TrendingUp, Users, Target, DollarSign } from 'lucide-react';
 const ClientReports = () => {
   const cards = [
     {
-      title: "ИТ-таргетолога - CPL 0,66$ (+68%)",
+      title: "Ниша: Маркетинг",
       src: "/lovable-uploads/c6d0ba6b-e764-44b4-9826-e32e933eb453.png",
     },
     {
-      title: "Автоматизация - CPL 1,18$ (+24%)",
+      title: "Ниша: Пенсионный аннуитет",
       src: "/lovable-uploads/ad2c6826-7611-4ba7-85fd-fa1561c3d479.png",
     },
     {
-      title: "Электробайки - CPL 1,26$ (+91%)",
+      title: "Ниша: Электробайки",
       src: "/lovable-uploads/51069eca-38b2-48dc-9645-1ecd37d6b8c7.png",
     },
     {
-      title: "Новое объявление - CPL 0,84$ (+134%)",
+      title: "Ниша: Психология",
       src: "/lovable-uploads/e694d9f4-a2c7-4f99-8900-1cf08f7573a7.png",
     },
     {
-      title: "Весь Казахстан - CPL 1,05$ (+78%)",
+      title: "Ниша: Организация свадеб",
       src: "/lovable-uploads/6494fbcc-fe16-4e01-9ef1-c43bd145fbe7.png",
     },
     {
-      title: "Кампания 2804 - CPL 0,85$ (+156%)",
-      src: "/lovable-uploads/b13595c9-56b8-4f91-a7a6-fdbef21d2302.png",
+      title: "Ниша: Фермерские продукты",
+      src: "/lovable-uploads/6343d8c7-986f-438f-919d-5cdf52c40903.png",
     },
   ];
 
