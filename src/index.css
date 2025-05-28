@@ -157,7 +157,7 @@
 }
 
 .proposal-section {
-  @apply mb-12 p-6 border border-white/10 rounded-xl bg-gradient-card transition-all duration-300;
+  @apply mb-12 p-6 border border-white/10 rounded-xl bg-gradient-to-br from-black/50 to-gray-900/30 transition-all duration-300;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -359,4 +359,3 @@ html, body {
     transition: none !important;
   }
 }
-
