@@ -8,129 +8,129 @@ const ClientReports = () => {
   const reportItems = [
     <ReportCard 
       key="report-1"
-      clientName="ТОО Astana Digital"
-      metric="Заявки"
-      value="347"
-      growth="+156%"
-      period="за месяц"
+      clientName="ИТ-таргетолога"
+      metric="CPL"
+      value="0,66$"
+      growth="+68%"
+      period="9 лидов"
       icon={Target}
     />,
     <ReportCard 
       key="report-2"
-      clientName="Almaty Fitness"
-      metric="CTR"
-      value="4.8%"
-      growth="+89%"
-      period="за неделю"
+      clientName="Автоматизация"
+      metric="CPL"
+      value="1,18$"
+      growth="+24%"
+      period="5 лидов"
       icon={TrendingUp}
     />,
     <ReportCard 
       key="report-3"
-      clientName="Shymkent Auto"
-      metric="CPC"
-      value="85 ₸"
-      growth="-43%"
-      period="за месяц"
+      clientName="Электробайки"
+      metric="CPL"
+      value="1,26$"
+      growth="+91%"
+      period="7 лидов"
       icon={DollarSign}
     />,
     <ReportCard 
       key="report-4"
-      clientName="Nur-Sultan Beauty"
-      metric="Конверсия"
-      value="12.3%"
-      growth="+67%"
-      period="за неделю"
+      clientName="Новое объявление"
+      metric="CPL"
+      value="0,84$"
+      growth="+134%"
+      period="16 лидов"
       icon={Users}
     />,
     <ReportCard 
       key="report-5"
-      clientName="Караганда Tech"
-      metric="ROAS"
-      value="3.8x"
-      growth="+124%"
-      period="за месяц"
-      icon={TrendingUp}
-    />,
-    <ReportCard 
-      key="report-6"
-      clientName="Atyrau Energy"
-      metric="Заявки"
-      value="189"
+      clientName="Весь Казахстан"
+      metric="CPL"
+      value="1,05$"
       growth="+78%"
-      period="за неделю"
+      period="5 лидов"
       icon={Target}
     />,
     <ReportCard 
-      key="report-7"
-      clientName="Pavlodar Мед"
+      key="report-6"
+      clientName="Кампания 2804"
       metric="CPL"
-      value="1,240 ₸"
-      growth="-31%"
-      period="за месяц"
+      value="0,85$"
+      growth="+156%"
+      period="3 лида"
+      icon={TrendingUp}
+    />,
+    <ReportCard 
+      key="report-7"
+      clientName="EcoChickenAI"
+      metric="CPL"
+      value="1,72$"
+      growth="+89%"
+      period="7 лидов"
       icon={DollarSign}
     />,
     <ReportCard 
       key="report-8"
-      clientName="Актобе Строй"
-      metric="Охват"
-      value="45.2K"
-      growth="+92%"
-      period="за неделю"
+      clientName="Вовлеченность"
+      metric="CPL"
+      value="0,50$"
+      growth="+245%"
+      period="19 лидов"
       icon={Users}
     />,
     <ReportCard 
       key="report-9"
-      clientName="Тараз Fashion"
-      metric="CTR"
-      value="6.1%"
-      growth="+134%"
-      period="за месяц"
-      icon={TrendingUp}
-    />,
-    <ReportCard 
-      key="report-10"
-      clientName="Семей IT"
-      metric="Конверсия"
-      value="8.7%"
-      growth="+45%"
-      period="за неделю"
+      clientName="EP/Сообщвотсап"
+      metric="CPL"
+      value="0,76$"
+      growth="+187%"
+      period="43 лида"
       icon={Target}
     />,
     <ReportCard 
+      key="report-10"
+      clientName="НГ стол"
+      metric="CPL"
+      value="1,91$"
+      growth="+67%"
+      period="18 лидов"
+      icon={TrendingUp}
+    />,
+    <ReportCard 
       key="report-11"
-      clientName="Костанай Авто"
-      metric="ROAS"
-      value="4.2x"
-      growth="+156%"
-      period="за месяц"
+      clientName="Общая сводка"
+      metric="CPL"
+      value="1,20$"
+      growth="+124%"
+      period="73 лида"
       icon={DollarSign}
     />,
     <ReportCard 
       key="report-12"
-      clientName="Уральск Дом"
-      metric="Заявки"
-      value="267"
-      growth="+89%"
-      period="за неделю"
+      clientName="Астана/24.10.24"
+      metric="CPL"
+      value="0,79$"
+      growth="+95%"
+      period="Средний CPL"
       icon={Users}
     />,
     <ReportCard 
       key="report-13"
-      clientName="Петропавловск"
-      metric="CPC"
-      value="72 ₸"
-      growth="-28%"
-      period="за месяц"
-      icon={DollarSign}
+      clientName="Затраты 22,25$"
+      metric="Лиды"
+      value="23"
+      growth="+156%"
+      period="за день"
+      icon={Target}
     />,
     <ReportCard 
       key="report-14"
-      clientName="Актау Море"
-      metric="CTR"
-      value="5.4%"
-      growth="+112%"
+      clientName="Бюджет 87,82$"
+      metric="Лиды"
+      value="73"
+      growth="+198%"
       period="за неделю"
-      icon={TrendingUp}
+      icon={DollarSign}
     />,
   ];
 
