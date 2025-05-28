@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GridMotion } from './grid-motion';
 import { Card, CardContent } from './card';
@@ -15,7 +14,7 @@ const ClientReports = () => {
       period="9 лидов"
       icon={Target}
     />,
-    "/lovable-uploads/e38c2fbe-9f4a-4e8b-a66e-afc1ff11665d.png",
+    "https://pub-ee9ccab7ff764a0d92c17db5fce8a9ce.r2.dev/lovable-uploads/e38c2fbe-9f4a-4e8b-a66e-afc1ff11665d.png",
     <ReportCard 
       key="report-2"
       clientName="Автоматизация"
@@ -25,7 +24,7 @@ const ClientReports = () => {
       period="5 лидов"
       icon={TrendingUp}
     />,
-    "/lovable-uploads/1adcd8dc-4caf-4f71-8b26-e8cd64b5d0e4.png",
+    "https://pub-ee9ccab7ff764a0d92c17db5fce8a9ce.r2.dev/lovable-uploads/1adcd8dc-4caf-4f71-8b26-e8cd64b5d0e4.png",
     <ReportCard 
       key="report-3"
       clientName="Электробайки"
@@ -35,7 +34,7 @@ const ClientReports = () => {
       period="7 лидов"
       icon={DollarSign}
     />,
-    "/lovable-uploads/f4b64b71-c654-464f-a7b7-f4af9b13d57f.png",
+    "https://pub-ee9ccab7ff764a0d92c17db5fce8a9ce.r2.dev/lovable-uploads/f4b64b71-c654-464f-a7b7-f4af9b13d57f.png",
     <ReportCard 
       key="report-4"
       clientName="Новое объявление"
@@ -45,7 +44,7 @@ const ClientReports = () => {
       period="16 лидов"
       icon={Users}
     />,
-    "/lovable-uploads/b5b41424-7acd-4628-8aec-d4a9ab8cb421.png",
+    "https://pub-ee9ccab7ff764a0d92c17db5fce8a9ce.r2.dev/lovable-uploads/b5b41424-7acd-4628-8aec-d4a9ab8cb421.png",
     <ReportCard 
       key="report-5"
       clientName="Весь Казахстан"
@@ -55,7 +54,7 @@ const ClientReports = () => {
       period="5 лидов"
       icon={Target}
     />,
-    "/lovable-uploads/19cdf893-6b37-4754-bb6e-eacf12ecb67f.png",
+    "https://pub-ee9ccab7ff764a0d92c17db5fce8a9ce.r2.dev/lovable-uploads/19cdf893-6b37-4754-bb6e-eacf12ecb67f.png",
     <ReportCard 
       key="report-6"
       clientName="Кампания 2804"
@@ -65,7 +64,7 @@ const ClientReports = () => {
       period="3 лида"
       icon={TrendingUp}
     />,
-    "/lovable-uploads/62c31b23-cec3-462b-ba5d-d51e38a5fddc.png",
+    "https://pub-ee9ccab7ff764a0d92c17db5fce8a9ce.r2.dev/lovable-uploads/62c31b23-cec3-462b-ba5d-d51e38a5fddc.png",
     <ReportCard 
       key="report-7"
       clientName="EcoChickenAI"
@@ -75,7 +74,7 @@ const ClientReports = () => {
       period="7 лидов"
       icon={DollarSign}
     />,
-    "/lovable-uploads/df47e3ad-b2e3-44a3-bbb4-d6e3c68b8fd9.png",
+    "https://pub-ee9ccab7ff764a0d92c17db5fce8a9ce.r2.dev/lovable-uploads/df47e3ad-b2e3-44a3-bbb4-d6e3c68b8fd9.png",
     <ReportCard 
       key="report-8"
       clientName="Вовлеченность"
