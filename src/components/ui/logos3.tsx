@@ -73,6 +73,42 @@ const Logos3 = ({
       image: "https://shadcnblocks.com/images/block/logos/vercel.svg",
       className: "h-7 w-auto",
     },
+    {
+      id: "logo-9",
+      description: "Client Logo 9",
+      image: "/lovable-uploads/11351c25-f18f-456f-9310-7a086c73f356.png",
+      className: "h-12 w-auto",
+    },
+    {
+      id: "logo-10",
+      description: "Client Logo 10", 
+      image: "/lovable-uploads/4157d564-2f4a-4371-b63c-5b4372c3e01a.png",
+      className: "h-12 w-auto",
+    },
+    {
+      id: "logo-11",
+      description: "Client Logo 11",
+      image: "/lovable-uploads/61a2d3f1-423f-44f0-b7c2-a0bd07ed3f6e.png",
+      className: "h-12 w-auto",
+    },
+    {
+      id: "logo-12",
+      description: "Client Logo 12",
+      image: "/lovable-uploads/c4c7ab77-aef1-46dc-899e-4ee7daf44ae3.png",
+      className: "h-12 w-auto",
+    },
+    {
+      id: "logo-13",
+      description: "Client Logo 13",
+      image: "/lovable-uploads/7354785b-7d72-4bcd-9b3e-b8bb2eaedfeb.png",
+      className: "h-12 w-auto",
+    },
+    {
+      id: "logo-14",
+      description: "Client Logo 14",
+      image: "/lovable-uploads/dfcb9cbf-dece-4dc1-a18d-754f4cd3a046.png",
+      className: "h-12 w-auto",
+    },
   ],
 }: Logos3Props) => {
   return (
