@@ -13,6 +13,7 @@ import { ComparisonDashboard } from '@/components/ui/comparison-dashboard';
 import ClientReports from '@/components/ui/client-reports';
 import { Logos3 } from '@/components/ui/logos3';
 import { cn } from '@/lib/utils';
+import { StaggerTestimonials } from '@/components/ui/stagger-testimonials';
 
 const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
@@ -196,6 +197,21 @@ const Index = () => {
       <div className="bg-black">
         <Logos3 {...logoData} />
       </div>
+
+      {/* Testimonials Section */}
+      <section className="relative overflow-hidden bg-black text-white py-20">
+        <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-8">
+          <div className="mb-12 space-y-3">
+            <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight text-white">
+              Отзывы клиентов
+            </h2>
+            <p className="text-center text-base text-white/60 md:text-lg">
+              Реальные отзывы предпринимателей, которые уже используют наш ИИ-таргетолог
+            </p>
+          </div>
+          <StaggerTestimonials />
+        </div>
+      </section>
 
       {/* Pricing Section */}
       <section className="relative overflow-hidden bg-black text-white">
