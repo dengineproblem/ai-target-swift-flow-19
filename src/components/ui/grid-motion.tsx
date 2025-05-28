@@ -69,6 +69,7 @@ export function GridMotion({
 
   const isImagePath = (content: string | ReactNode): boolean => {
     return typeof content === 'string' && (
+      content.startsWith('public/lovable-uploads/') || 
       content.startsWith('/lovable-uploads/') || 
       content.startsWith('http') ||
       content.includes('.png') ||
@@ -77,6 +78,13 @@ export function GridMotion({
       content.includes('.gif') ||
       content.includes('.webp')
     )
+  }
+
+  const getImageSrc = (content: string): string => {
+    if (content.startsWith('public/')) {
+      return content.replace('public/', '/')
+    }
+    return content
   }
 
   return (
@@ -103,9 +111,13 @@ export function GridMotion({
                     <div className="relative h-full w-full overflow-hidden rounded-lg bg-muted flex items-center justify-center text-foreground text-xl">
                       {isImage ? (
                         <img
-                          src={content as string}
+                          src={getImageSrc(content as string)}
                           alt=""
                           className="absolute inset-0 w-full h-full object-cover"
+                          onError={(e) => {
+                            console.log('Image failed to load:', content)
+                            e.currentTarget.style.display = 'none'
+                          }}
                         />
                       ) : (
                         <div className="p-4 text-center z-1">
