@@ -74,12 +74,9 @@ export const PricingCard = ({
             <Benefit key={index} {...benefit} />
           ))}
         </div>
-        <Button
-          className="w-full"
-          variant={tier === "12 месяцев" ? "default" : "ghost"}
-        >
+        <button className="w-full border border-zinc-600 text-white px-4 py-2 rounded-md transition-all duration-200 hover:scale-105 hover:border-zinc-400 hover:bg-zinc-800/50">
           {CTA}
-        </Button>
+        </button>
       </Card>
     </motion.div>
   )
