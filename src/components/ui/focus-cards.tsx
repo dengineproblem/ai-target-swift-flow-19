@@ -26,7 +26,7 @@ export const Card = React.memo(
       <img
         src={card.src}
         alt={card.title}
-        className="object-contain w-full h-full" // Changed from object-cover to object-contain
+        className="object-contain w-full h-full"
       />
       <div
         className={cn(
@@ -53,7 +53,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto md:px-8 w-full">
       {cards.map((card, index) => (
         <Card
           key={card.title}

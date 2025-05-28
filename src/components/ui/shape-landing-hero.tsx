@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
@@ -118,7 +119,7 @@ function HeroGeometric({
                     </motion.div>
 
                     <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
-                        <RainbowButton onClick={handleButtonClick} className="text-lg px-8 py-3">
+                        <RainbowButton onClick={handleButtonClick} className="text-lg px-8 py-3 transition-transform duration-200 hover:scale-105">
                             Записаться на демонстрацию
                         </RainbowButton>
                     </motion.div>
