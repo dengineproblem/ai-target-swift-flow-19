@@ -8,27 +8,27 @@ const ClientReports = () => {
   const cards = [
     {
       title: "ИТ-таргетолога - CPL 0,66$ (+68%)",
-      src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/lovable-uploads/c6d0ba6b-e764-44b4-9826-e32e933eb453.png",
     },
     {
       title: "Автоматизация - CPL 1,18$ (+24%)",
-      src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/lovable-uploads/ad2c6826-7611-4ba7-85fd-fa1561c3d479.png",
     },
     {
       title: "Электробайки - CPL 1,26$ (+91%)",
-      src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/lovable-uploads/51069eca-38b2-48dc-9645-1ecd37d6b8c7.png",
     },
     {
       title: "Новое объявление - CPL 0,84$ (+134%)",
-      src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/lovable-uploads/e694d9f4-a2c7-4f99-8900-1cf08f7573a7.png",
     },
     {
       title: "Весь Казахстан - CPL 1,05$ (+78%)",
-      src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/lovable-uploads/6494fbcc-fe16-4e01-9ef1-c43bd145fbe7.png",
     },
     {
       title: "Кампания 2804 - CPL 0,85$ (+156%)",
-      src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/lovable-uploads/b13595c9-56b8-4f91-a7a6-fdbef21d2302.png",
     },
   ];
 
