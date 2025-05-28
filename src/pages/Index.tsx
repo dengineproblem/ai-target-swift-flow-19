@@ -165,13 +165,6 @@ const Index = () => {
   return <div className="min-h-screen bg-black text-white">
       <HeroGeometric badge="ИИ-таргетинг" title1="Заменим вашего таргетолога на ИИ" title2="и удвоим количество заявок при том же бюджете" />
       
-      {/* Simple Video Section */}
-      <SimpleVideoSection 
-        title="Демонстрация работы системы"
-        description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
-        videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
-      />
-
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
         
@@ -191,15 +184,25 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Timeline Section */}
+      {/* Simple Video Section */}
+      <SimpleVideoSection 
+        title="Демонстрация работы системы"
+        description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
+        videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
+      />
+
+      {/* Comparison Dashboard - Выгоды от использования ИИ-таргетолога */}
+      <ComparisonDashboard />
+
+      {/* Timeline Section - Как работает ИИ-таргетолог */}
       <Timeline data={timelineData} />
 
-      {/* Logos Section */}
+      {/* Logos Section - 50+ компаний уже доверились нам */}
       <div className="bg-black">
         <Logos3 {...logoData} />
       </div>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - Отзывы клиентов */}
       <section className="relative overflow-hidden bg-black text-white py-20">
         <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-8">
           <div className="mb-12 space-y-3">
@@ -214,10 +217,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Client Reports Section */}
+      {/* Client Reports Section - Результаты наших клиентов */}
       <ClientReports />
 
-      {/* Pricing Section */}
+      {/* Pricing Section - Тарифы */}
       <section className="relative overflow-hidden bg-black text-white">
         <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 md:px-8">
           <div className="mb-12 space-y-3">
@@ -268,9 +271,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Comparison Dashboard */}
-      <ComparisonDashboard />
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
