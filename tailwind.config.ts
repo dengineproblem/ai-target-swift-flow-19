@@ -60,6 +60,11 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -121,11 +126,10 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(100%)" }
         },
-        // Rainbow Animation - медленное плавное свечение
+        // Rainbow Animation
         rainbow: {
-          "0%": { "background-position": "0% 50%" },
-          "50%": { "background-position": "100% 50%" },
-          "100%": { "background-position": "0% 50%" }
+          "0%": { "background-position": "0%" },
+          "100%": { "background-position": "200%" }
         }
       },
       animation: {
@@ -141,8 +145,8 @@ const config: Config = {
         // Combined Animations
         "enter": "fade-in 0.3s ease-out, scale-in 0.2s ease-out",
         "exit": "fade-out 0.3s ease-out, scale-out 0.2s ease-out",
-        // Rainbow Animation - медленное плавное свечение 3 секунды
-        rainbow: "rainbow 3s ease-in-out infinite"
+        // Rainbow Animation 
+        rainbow: "rainbow var(--speed, 2s) infinite linear"
       },
     },
   },
