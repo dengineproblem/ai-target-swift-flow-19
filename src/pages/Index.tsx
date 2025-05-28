@@ -11,6 +11,7 @@ import { Timeline } from '@/components/ui/timeline';
 import { PricingCard } from '@/components/ui/dark-gradient-pricing';
 import { ComparisonDashboard } from '@/components/ui/comparison-dashboard';
 import ClientReports from '@/components/ui/client-reports';
+import { Logos3 } from '@/components/ui/logos3';
 import { cn } from '@/lib/utils';
 
 const Index = () => {
@@ -105,6 +106,48 @@ const Index = () => {
     },
   ];
 
+  const logoData = {
+    heading: "50+ компаний уже доверились нам",
+    logos: [
+      {
+        id: "logo-1",
+        description: "Компания 1",
+        image: "/lovable-uploads/61a2d3f1-423f-44f0-b7c2-a0bd07ed3f6e.png",
+        className: "h-12 w-auto",
+      },
+      {
+        id: "logo-2",
+        description: "KAESH",
+        image: "/lovable-uploads/c4c7ab77-aef1-46dc-899e-4ee7daf44ae3.png",
+        className: "h-12 w-auto",
+      },
+      {
+        id: "logo-3",
+        description: "7S",
+        image: "/lovable-uploads/4157d564-2f4a-4371-b63c-5b4372c3e01a.png",
+        className: "h-12 w-auto",
+      },
+      {
+        id: "logo-4",
+        description: "8:8 Business Club",
+        image: "/lovable-uploads/11351c25-f18f-456f-9310-7a086c73f356.png",
+        className: "h-12 w-auto",
+      },
+      {
+        id: "logo-5",
+        description: "Ski Bu",
+        image: "/lovable-uploads/7354785b-7d72-4bcd-9b3e-b8bb2eaedfeb.png",
+        className: "h-12 w-auto",
+      },
+      {
+        id: "logo-6",
+        description: "Super Ferma",
+        image: "/lovable-uploads/dfcb9cbf-dece-4dc1-a18d-754f4cd3a046.png",
+        className: "h-12 w-auto",
+      },
+    ],
+  };
+
   return <div className="min-h-screen bg-black text-white">
       <HeroGeometric badge="ИИ-таргетинг" title1="Заменим вашего таргетолога на ИИ" title2="и удвоим количество заявок при том же бюджете" />
       
@@ -136,6 +179,11 @@ const Index = () => {
 
       {/* Timeline Section */}
       <Timeline data={timelineData} />
+
+      {/* Logos Section */}
+      <div className="bg-black">
+        <Logos3 {...logoData} />
+      </div>
 
       {/* Pricing Section */}
       <section className="relative overflow-hidden bg-black text-white">
