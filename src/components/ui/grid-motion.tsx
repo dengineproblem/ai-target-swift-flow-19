@@ -67,6 +67,18 @@ export function GridMotion({
     }
   }, [])
 
+  const isImagePath = (content: string | ReactNode): boolean => {
+    return typeof content === 'string' && (
+      content.startsWith('/lovable-uploads/') || 
+      content.startsWith('http') ||
+      content.includes('.png') ||
+      content.includes('.jpg') ||
+      content.includes('.jpeg') ||
+      content.includes('.gif') ||
+      content.includes('.webp')
+    )
+  }
+
   return (
     <div className={cn("h-full w-full overflow-hidden", className)} ref={gridRef}>
       <section
@@ -84,15 +96,16 @@ export function GridMotion({
             >
               {[...Array(7)].map((_, itemIndex) => {
                 const content = combinedItems[rowIndex * 7 + itemIndex]
+                const isImage = isImagePath(content)
+                
                 return (
                   <div key={itemIndex} className="relative">
                     <div className="relative h-full w-full overflow-hidden rounded-lg bg-muted flex items-center justify-center text-foreground text-xl">
-                      {typeof content === 'string' && content.startsWith('http') ? (
-                        <div
-                          className="absolute inset-0 bg-cover bg-center"
-                          style={{
-                            backgroundImage: `url(${content})`,
-                          }}
+                      {isImage ? (
+                        <img
+                          src={content as string}
+                          alt=""
+                          className="absolute inset-0 w-full h-full object-cover"
                         />
                       ) : (
                         <div className="p-4 text-center z-1">
