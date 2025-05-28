@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -10,6 +9,7 @@ import { GlowingEffect } from '@/components/ui/glowing-effect';
 import SimpleVideoSection from '@/components/ui/simple-video-section';
 import { Timeline } from '@/components/ui/timeline';
 import { PricingCard } from '@/components/ui/dark-gradient-pricing';
+import { ComparisonDashboard } from '@/components/ui/comparison-dashboard';
 import { cn } from '@/lib/utils';
 
 const Index = () => {
@@ -187,6 +187,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Comparison Dashboard */}
+      <ComparisonDashboard />
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
