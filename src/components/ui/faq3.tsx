@@ -114,7 +114,7 @@ const Faq3 = ({
           </p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
             <button 
-              className="w-full sm:w-auto inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-black transition-colors hover:bg-white/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
+              className="w-full sm:w-auto px-8 py-3 bg-black border border-purple-500/30 text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 rounded-lg font-bold tracking-wide transform hover:scale-105 shadow-lg hover:shadow-xl"
               onClick={() => window.open(supportButtonUrl, '_blank', 'noopener,noreferrer')}
             >
               {supportButtonText}
