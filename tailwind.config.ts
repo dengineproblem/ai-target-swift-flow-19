@@ -126,10 +126,11 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(100%)" }
         },
-        // Rainbow Animation
+        // Rainbow Animation - медленное плавное свечение
         rainbow: {
-          "0%": { "background-position": "0%" },
-          "100%": { "background-position": "200%" }
+          "0%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+          "100%": { "background-position": "0% 50%" }
         }
       },
       animation: {
@@ -145,8 +146,8 @@ const config: Config = {
         // Combined Animations
         "enter": "fade-in 0.3s ease-out, scale-in 0.2s ease-out",
         "exit": "fade-out 0.3s ease-out, scale-out 0.2s ease-out",
-        // Rainbow Animation 
-        rainbow: "rainbow var(--speed, 2s) infinite linear"
+        // Rainbow Animation - медленное плавное свечение 3 секунды
+        rainbow: "rainbow 3s ease-in-out infinite"
       },
     },
   },
