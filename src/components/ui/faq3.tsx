@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
 interface FaqItem {
@@ -107,20 +106,6 @@ const Faq3 = ({
           ))}
         </Accordion>
         <div className="mx-auto flex max-w-4xl flex-col items-center rounded-lg bg-white/5 p-4 text-center md:rounded-xl md:p-6 lg:p-8 border border-white/10">
-          <div className="relative">
-            <Avatar className="absolute mb-4 size-16 origin-bottom -translate-x-[60%] scale-[80%] border border-white/20 md:mb-5">
-              <AvatarImage src="https://shadcnblocks.com/images/block/avatar-2.webp" />
-              <AvatarFallback className="bg-white/10 text-white">SU</AvatarFallback>
-            </Avatar>
-            <Avatar className="absolute mb-4 size-16 origin-bottom translate-x-[60%] scale-[80%] border border-white/20 md:mb-5">
-              <AvatarImage src="https://shadcnblocks.com/images/block/avatar-3.webp" />
-              <AvatarFallback className="bg-white/10 text-white">SU</AvatarFallback>
-            </Avatar>
-            <Avatar className="mb-4 size-16 border border-white/20 md:mb-5">
-              <AvatarImage src="https://shadcnblocks.com/images/block/avatar-1.webp" />
-              <AvatarFallback className="bg-white/10 text-white">SU</AvatarFallback>
-            </Avatar>
-          </div>
           <h3 className="mb-2 max-w-3xl font-semibold lg:text-lg text-white">
             {supportHeading}
           </h3>
@@ -128,11 +113,12 @@ const Faq3 = ({
             {supportDescription}
           </p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
-            <Button className="w-full sm:w-auto bg-indigo hover:bg-indigo-light" asChild>
-              <a href={supportButtonUrl} target="_blank">
-                {supportButtonText}
-              </a>
-            </Button>
+            <button 
+              className="w-full sm:w-auto px-8 py-3 bg-white text-black hover:bg-gray-100 transition-colors duration-300 rounded-lg font-bold tracking-wide"
+              onClick={() => window.open(supportButtonUrl, '_blank', 'noopener,noreferrer')}
+            >
+              {supportButtonText}
+            </button>
           </div>
         </div>
       </div>

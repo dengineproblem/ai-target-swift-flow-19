@@ -296,9 +296,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Часто задаваемые вопросы */}
-      <Faq3 {...faqData} />
-
       {/* Pricing Section - Тарифы */}
       <section className="relative overflow-hidden bg-black text-white">
         <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 md:px-8">
@@ -350,149 +347,16 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section - Часто задаваемые вопросы */}
+      <Faq3 {...faqData} />
       
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
-        
-        <div className="container mx-auto px-4 py-16 max-w-4xl relative z-10">
-          <div className="space-y-12 mb-16">
-            
-            <NoisePatternCard ref={el => sectionsRef.current[1] = el} className="opacity-0 border-white/[0.08] bg-black/40 backdrop-blur-sm">
-              <NoisePatternCardBody className="p-8">
-                <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight">
-                  ДЛЯ КОГО?
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Для тех, кто хочет получать в 2,5 раза больше клиентов при тех же затратах на маркетинг.</span>
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Для тех, кто тратит 100–300 тыс. ₸ на рекламу и не понимает, зачем платить ещё столько же таргетологу</span>
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Для предпринимателей, которым надоело объяснять подрядчику очевидные вещи и ждать реакции по 3 дня</span>
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Для тех, кто сливает бюджет на непонятные кампании без отчётности и контроля</span>
-                    </p>
-                  </div>
-                </div>
-              </NoisePatternCardBody>
-            </NoisePatternCard>
-            
-            <NoisePatternCard ref={el => sectionsRef.current[2] = el} className="opacity-0 border-white/[0.08] bg-black/40 backdrop-blur-sm">
-              <NoisePatternCardBody className="p-8">
-                <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight">
-                  ЧТО ВЫ ПОЛУЧИТЕ?
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Запуск рекламных кампаний в 1 клик через Telegram</span>
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Ежедневная оптимизация и контроль бюджета</span>
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Сценарии для креативов, сгенерированные ИИ под ваш бизнес</span>
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2.5 shrink-0"></div>
-                    <p className="text-white/60 leading-relaxed">
-                      <span className="text-white font-medium">Мини-приложение с прозрачной статистикой и управлением рекламой</span>
-                    </p>
-                  </div>
-                </div>
-              </NoisePatternCardBody>
-            </NoisePatternCard>
-          </div>
-          
-          <div className="space-y-16">
-            <section ref={el => sectionsRef.current[3] = el} className="proposal-section">
-              <h3 className="proposal-section-title">
-                <Banknote className="w-6 h-6 mr-2 text-indigo icon-glow" />
-                ТАРИФЫ
-              </h3>
-              <div className={`w-full ${isMobile ? 'text-xs' : 'text-sm'}`}>
-                <table className="w-full text-left text-white mt-4">
-                  <tbody>
-                    <tr className="border-b border-white/10">
-                      <td className="py-3"><strong>Внедрение (разово)</strong></td>
-                      <td className="py-3 text-white"><strong>25 000 ₸</strong></td>
-                    </tr>
-                    <tr className="border-b border-white/10">
-                      <td className="py-3"><strong>Подписка (ежемесячно)</strong></td>
-                      <td className="py-3 text-white"><strong>25 000 ₸ / мес</strong></td>
-                    </tr>
-                    <tr>
-                      <td className="py-3"><strong>Экономия в сравнении с таргетологом</strong></td>
-                      <td className="py-3 text-white"><strong>до 275 000 ₸ / мес</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-            
-            <section ref={el => sectionsRef.current[5] = el} className="proposal-section">
-              <h3 className="proposal-section-title">
-                <Check className="w-6 h-6 mr-2 text-indigo icon-glow" />
-                ГАРАНТИИ
-              </h3>
-              <p className="mb-4 text-white/90">
-                <strong>Мы запускаем ИИ-таргетолога в течение 24 часов с момента оплаты.</strong>
-              </p>
-              <p className="text-white/90">
-                <strong>Если этого не происходит — вернём деньги.</strong>
-              </p>
-            </section>
-            
-            <section ref={el => sectionsRef.current[6] = el} className="proposal-section text-center">
-              <h3 className="proposal-section-title justify-center">
-                <MessageSquarePlus className="w-6 h-6 mr-2 text-indigo icon-glow" />
-                КАК НАЧАТЬ
-              </h3>
-              <p className="mb-6 text-xl text-white/90">
-                <strong>👉 Оставьте заявку, и мы свяжемся с вами.</strong>
-              </p>
-              <div className="mt-6">
-                <Button onClick={handleButtonClick} className="px-8 py-3 bg-indigo hover:bg-indigo-light transition-colors duration-300 rounded-lg font-bold tracking-wide btn-animated">
-                  Записаться на демонстрацию
-                </Button>
-              </div>
-            </section>
-          </div>
-          
-          <footer className="mt-16 pt-8 text-center text-white/40 text-sm">
-            <p>© 2025 Perfomante. Все права защищены.</p>
-          </footer>
-        </div>
-      </div>
+      <footer className="mt-16 pt-8 text-center text-white/40 text-sm">
+        <p>© 2025 Perfomante. Все права защищены.</p>
+      </footer>
     </div>;
 };
 
-interface GridItemProps {
-  title: string;
-  description: React.ReactNode;
-}
 const GridItem = ({
   title,
   description
