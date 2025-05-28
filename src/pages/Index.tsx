@@ -16,6 +16,11 @@ import { cn } from '@/lib/utils';
 import { StaggerTestimonials } from '@/components/ui/stagger-testimonials';
 import { Faq3 } from '@/components/ui/faq3';
 
+interface GridItemProps {
+  title: string;
+  description: string;
+}
+
 const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const isMobile = useIsMobile();
