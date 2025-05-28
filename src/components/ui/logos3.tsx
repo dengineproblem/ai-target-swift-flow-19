@@ -109,6 +109,18 @@ const Logos3 = ({
       image: "/lovable-uploads/dfcb9cbf-dece-4dc1-a18d-754f4cd3a046.png",
       className: "h-12 w-auto",
     },
+    {
+      id: "logo-15",
+      description: "Aqua Rezerv",
+      image: "/lovable-uploads/1dfb43af-0e55-4c1c-ad19-43a36fe6ddde.png",
+      className: "h-12 w-auto",
+    },
+    {
+      id: "logo-16",
+      description: "USmile",
+      image: "/lovable-uploads/73a5b0f5-a697-429c-87bb-0e71734eb8dc.png",
+      className: "h-12 w-auto",
+    },
   ],
 }: Logos3Props) => {
   // Дублируем логотипы для бесконечной прокрутки
