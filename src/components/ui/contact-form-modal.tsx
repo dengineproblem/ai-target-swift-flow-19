@@ -4,7 +4,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 
 interface ContactFormModalProps {
@@ -16,10 +15,7 @@ interface ContactFormModalProps {
 export const ContactFormModal = ({ isOpen, onClose, selectedPlan }: ContactFormModalProps) => {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
-    email: '',
-    company: '',
-    message: ''
+    phone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -28,7 +24,7 @@ export const ContactFormModal = ({ isOpen, onClose, selectedPlan }: ContactFormM
     e.preventDefault();
     setIsSubmitting(true);
 
-    console.log('Отправка формы:', { ...formData, plan: selectedPlan });
+    console.log('Отправка заявки:', { ...formData, plan: selectedPlan });
 
     // Симуляция отправки данных
     setTimeout(() => {
@@ -39,17 +35,14 @@ export const ContactFormModal = ({ isOpen, onClose, selectedPlan }: ContactFormM
       
       setFormData({
         name: '',
-        phone: '',
-        email: '',
-        company: '',
-        message: ''
+        phone: ''
       });
       setIsSubmitting(false);
       onClose();
     }, 1000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -97,50 +90,6 @@ export const ContactFormModal = ({ isOpen, onClose, selectedPlan }: ContactFormM
               required
               className="bg-zinc-800 border-zinc-600 text-white placeholder:text-zinc-400"
               placeholder="+7 (___) ___-__-__"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-white">
-              Email *
-            </Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="bg-zinc-800 border-zinc-600 text-white placeholder:text-zinc-400"
-              placeholder="example@email.com"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="company" className="text-white">
-              Компания
-            </Label>
-            <Input
-              id="company"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-              className="bg-zinc-800 border-zinc-600 text-white placeholder:text-zinc-400"
-              placeholder="Название компании"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="message" className="text-white">
-              Комментарий
-            </Label>
-            <Textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="bg-zinc-800 border-zinc-600 text-white placeholder:text-zinc-400 min-h-[80px]"
-              placeholder="Расскажите о вашем бизнесе..."
             />
           </div>
 
