@@ -308,16 +308,13 @@ const Index = () => {
             <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight text-white">
               Тарифы
             </h2>
-            <p className="text-center text-base text-white/60 md:text-lg">
-              Подключение за 100 000 ₸, далее 25 000 ₸ в месяц
-            </p>
           </div>
           <div className="flex justify-center">
             <div className="max-w-md w-full">
               <PricingCard
                 tier="ИИ-таргетолог"
                 price="100 000 ₸"
-                bestFor="Подключение + 25 000 ₸/месяц"
+                bestFor="разово, далее 25 000 ₸ в месяц"
                 CTA="Выбрать"
                 benefits={[
                   { text: "AI-агент для написания сценариев для креативов", checked: true },
