@@ -309,46 +309,23 @@ const Index = () => {
               Тарифы
             </h2>
             <p className="text-center text-base text-white/60 md:text-lg">
-              Выберите подходящий пакет для вашего бизнеса
+              Подключение за 100 000 ₸, далее 25 000 ₸ в месяц
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <PricingCard
-              tier="3 месяца"
-              price="120.000 ₸"
-              bestFor="40.000 ₸ в месяц"
-              CTA="Выбрать пакет"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Курс по таргетированной рекламе для предпринимателей", checked: false },
-              ]}
-            />
-            <PricingCard
-              tier="6 месяцев"
-              price="210.000 ₸"
-              bestFor="35.000 ₸ в месяц"
-              CTA="Выбрать пакет"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Курс по таргетированной рекламе для предпринимателей", checked: false },
-              ]}
-            />
-            <PricingCard
-              tier="12 месяцев"
-              price="300.000 ₸"
-              bestFor="25.000 ₸ в месяц"
-              CTA="Выбрать пакет"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Курс по таргетированной рекламе для предпринимателей", checked: true },
-              ]}
-            />
+          <div className="flex justify-center">
+            <div className="max-w-md w-full">
+              <PricingCard
+                tier="ИИ-таргетолог"
+                price="100 000 ₸"
+                bestFor="Подключение + 25 000 ₸/месяц"
+                CTA="Выбрать"
+                benefits={[
+                  { text: "AI-агент для написания сценариев для креативов", checked: true },
+                  { text: "Доступ к мини-приложению в Telegram", checked: true },
+                  { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                ]}
+              />
+            </div>
           </div>
         </div>
       </section>
