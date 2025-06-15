@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { User, Bot, TrendingUp, DollarSign } from 'lucide-react';
@@ -157,8 +156,8 @@ export const ComparisonDashboard = () => {
             <p className="text-white/60 text-sm">При том же бюджете получаете в 2 раза больше результата</p>
           </div>
           <div className="p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-white/10">
-            <h4 className="font-bold text-base mb-2">Экономия 225 тыс. ₸</h4>
-            <p className="text-white/60 text-sm">Больше денег остается на рекламу вместо оплаты специалисту</p>
+            <h4 className="font-bold text-base mb-2">Правильная оптимизация</h4>
+            <p className="text-white/60 text-sm">Акцент не на дешевые лиды, а на стоимость качественного лида и окупаемость креатива</p>
           </div>
           <div className="p-4 rounded-lg bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-white/10">
             <h4 className="font-bold text-base mb-2">Нет человеческого фактора</h4>
