@@ -14,6 +14,7 @@ import { Logos3 } from '@/components/ui/logos3';
 import { cn } from '@/lib/utils';
 import { StaggerTestimonials } from '@/components/ui/stagger-testimonials';
 import { Faq3 } from '@/components/ui/faq3';
+import { ComparisonDashboard } from '@/components/ui/comparison-dashboard';
 
 interface GridItemProps {
   title: string;
@@ -270,6 +271,9 @@ const Index = () => {
         description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
         videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
       />
+
+      {/* Comparison Dashboard - Выгода от использования ИИ-таргетолога */}
+      <ComparisonDashboard />
 
       {/* Optimization Section - Правильная оптимизация */}
       <section className="relative bg-black text-white py-12">
