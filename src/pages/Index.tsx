@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall } from 'lucide-react';
+import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall, Target, TrendingUp, Zap } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -9,7 +9,6 @@ import { GlowingEffect } from '@/components/ui/glowing-effect';
 import SimpleVideoSection from '@/components/ui/simple-video-section';
 import { Timeline } from '@/components/ui/timeline';
 import { PricingCard } from '@/components/ui/dark-gradient-pricing';
-import { ComparisonDashboard } from '@/components/ui/comparison-dashboard';
 import ClientReports from '@/components/ui/client-reports';
 import { Logos3 } from '@/components/ui/logos3';
 import { cn } from '@/lib/utils';
@@ -272,8 +271,51 @@ const Index = () => {
         videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
       />
 
-      {/* Comparison Dashboard - Выгоды от использования ИИ-таргетолога */}
-      <ComparisonDashboard />
+      {/* Optimization Section - Правильная оптимизация */}
+      <section className="relative bg-black text-white py-12">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Правильная оптимизация
+            </h2>
+            <p className="text-white/60 text-lg">
+              Акцент не на дешевые лиды, а на стоимость качественного лида и окупаемость креатива
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-lg bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-white/10">
+              <div className="flex items-center gap-3 mb-4">
+                <Target className="w-6 h-6 text-indigo-400" />
+                <h4 className="font-bold text-lg">Качественные лиды</h4>
+              </div>
+              <p className="text-white/60 text-sm">
+                Фокусируемся на привлечении клиентов, готовых к покупке, а не на максимальное количество заявок
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-lg bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-white/10">
+              <div className="flex items-center gap-3 mb-4">
+                <TrendingUp className="w-6 h-6 text-green-400" />
+                <h4 className="font-bold text-lg">Окупаемость креативов</h4>
+              </div>
+              <p className="text-white/60 text-sm">
+                Анализируем и оптимизируем каждый креатив по показателям конверсии в продажи
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-lg bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-white/10">
+              <div className="flex items-center gap-3 mb-4">
+                <Zap className="w-6 h-6 text-orange-400" />
+                <h4 className="font-bold text-lg">Умная автоматизация</h4>
+              </div>
+              <p className="text-white/60 text-sm">
+                ИИ автоматически перераспределяет бюджет в пользу наиболее прибыльных кампаний
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Timeline Section - Как работает ИИ-таргетолог */}
       <Timeline data={timelineData} />
@@ -313,13 +355,15 @@ const Index = () => {
             <div className="max-w-md w-full">
               <PricingCard
                 tier="ИИ-таргетолог"
-                price="100 000 ₸"
-                bestFor="разово, далее 25 000 ₸ в месяц"
+                price="35 000 ₸"
+                bestFor="в месяц"
                 CTA="Выбрать"
                 benefits={[
                   { text: "AI-агент для написания сценариев для креативов", checked: true },
                   { text: "Доступ к мини-приложению в Telegram", checked: true },
                   { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                  { text: "Оптимизация по качественным лидам", checked: true },
+                  { text: "Оптимизация по окупаемости креативов", checked: true },
                 ]}
               />
             </div>
