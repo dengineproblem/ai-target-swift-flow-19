@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall, Target, TrendingUp, Zap } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -335,7 +334,6 @@ const Index = () => {
                 { text: "AI-агент для управления рекламными кампаниями", checked: true },
                 { text: "Оптимизация по качественным лидам", checked: true },
                 { text: "Оптимизация по окупаемости креативов", checked: true },
-                { text: "Бонус: Курс «Таргет для предпринимателей»", checked: true },
               ]}
               className="border-primary/50 bg-gradient-to-b from-primary/5 to-transparent"
             />
@@ -350,7 +348,6 @@ const Index = () => {
                 { text: "AI-агент для управления рекламными кампаниями", checked: true },
                 { text: "Оптимизация по качественным лидам", checked: true },
                 { text: "Оптимизация по окупаемости креативов", checked: true },
-                { text: "Бонус: Курс «Таргет для предпринимателей»", checked: true },
               ]}
             />
             <PricingCard
