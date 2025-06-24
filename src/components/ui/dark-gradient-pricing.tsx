@@ -63,7 +63,7 @@ export const PricingCard = ({
           className={cn(
             "relative h-full w-full overflow-hidden border",
             "border-zinc-700 bg-black/90",
-            "p-6",
+            "p-6 flex flex-col",
             className,
           )}
         >
@@ -78,14 +78,14 @@ export const PricingCard = ({
               {bestFor}
             </span>
           </div>
-          <div className="space-y-4 py-9">
+          <div className="space-y-4 py-9 flex-grow">
             {benefits.map((benefit, index) => (
               <Benefit key={index} {...benefit} />
             ))}
           </div>
           <button 
             onClick={handleButtonClick}
-            className="w-full border border-zinc-600 text-white px-4 py-2 rounded-md transition-all duration-200 hover:scale-105 hover:border-zinc-400 hover:bg-zinc-800/50"
+            className="w-full border border-zinc-600 text-white px-4 py-2 rounded-md transition-all duration-200 hover:scale-105 hover:border-zinc-400 hover:bg-zinc-800/50 mt-auto"
           >
             {CTA}
           </button>
