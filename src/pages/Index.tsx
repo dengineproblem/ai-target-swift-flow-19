@@ -335,6 +335,7 @@ const Index = () => {
                 { text: "AI-агент для управления рекламными кампаниями", checked: true },
                 { text: "Оптимизация по качественным лидам", checked: true },
                 { text: "Оптимизация по окупаемости креативов", checked: true },
+                { text: "Бонус: Курс «Таргет для предпринимателей»", checked: true },
               ]}
               className="border-primary/50 bg-gradient-to-b from-primary/5 to-transparent"
             />
@@ -349,19 +350,18 @@ const Index = () => {
                 { text: "AI-агент для управления рекламными кампаниями", checked: true },
                 { text: "Оптимизация по качественным лидам", checked: true },
                 { text: "Оптимизация по окупаемости креативов", checked: true },
+                { text: "Бонус: Курс «Таргет для предпринимателей»", checked: true },
               ]}
             />
             <PricingCard
               tier="Курс «Таргет для предпринимателей»"
               price="50 000 ₸"
-              bestFor="Обучение таргетингу"
+              bestFor="Доступ навсегда"
               CTA="Купить курс"
               benefits={[
                 { text: "Как работает таргетированная реклама FB", checked: true },
                 { text: "Секреты результативных креативов", checked: true },
                 { text: "10 способов снизить стоимость лида", checked: true },
-                { text: "Практические задания", checked: true },
-                { text: "Поддержка преподавателя", checked: true },
               ]}
             />
           </div>
