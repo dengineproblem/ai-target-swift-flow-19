@@ -61,9 +61,11 @@ export const PricingCard = ({
       >
         <Card
           className={cn(
-            "relative h-full w-full overflow-hidden border",
-            "border-zinc-700 bg-black/90",
+            "relative h-full w-full overflow-hidden",
+            "bg-black/90",
             "p-6 flex flex-col",
+            // Условная обводка - если className не содержит border, используем базовую
+            className?.includes('border-') ? '' : 'border border-zinc-700',
             className,
           )}
         >
