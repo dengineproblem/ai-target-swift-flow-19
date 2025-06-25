@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion"
 import { Check, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -62,10 +61,8 @@ export const PricingCard = ({
         <Card
           className={cn(
             "relative h-full w-full overflow-hidden",
-            "bg-black/90",
+            "border border-zinc-700 bg-black/90",
             "p-6 flex flex-col",
-            // Условная обводка - если className не содержит border, используем базовую
-            className?.includes('border-') ? '' : 'border border-zinc-700',
             className,
           )}
         >
