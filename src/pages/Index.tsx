@@ -368,7 +368,12 @@ const Index = () => {
       {/* FAQ Section - Часто задаваемые вопросы */}
       <Faq3 {...faqData} />
       
-      <footer className="mt-16 pt-8 text-center text-white/40 text-sm">
+      <footer className="mt-16 pt-8 text-center text-white/40 text-sm space-y-2">
+        <div className="space-y-1">
+          <p className="text-white/60 font-medium">ИП «Камбалова»</p>
+          <p className="text-white/40">ИИН: 991211450899</p>
+          <p className="text-white/40">business@performanteaiagency.com</p>
+        </div>
         <p>© 2025 Perfomante. Все права защищены.</p>
       </footer>
     </div>;
