@@ -62,8 +62,8 @@ const TikTokCallbackServer = () => {
   // Функция для отправки кода на ваш сервер
   const sendCodeToServer = async (authCode: string) => {
     try {
-      // ВАЖНО: Замените URL на ваш серверный endpoint
-      const SERVER_ENDPOINT = 'https://performanteaiagency.com/api/tiktok/oauth/exchange';
+      // Правильный URL к PHP endpoint
+      const SERVER_ENDPOINT = 'https://performanteaiagency.com/api/tiktok/oauth/exchange.php';
       
       const response = await fetch(SERVER_ENDPOINT, {
         method: 'POST',
