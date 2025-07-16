@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "instanceId": "your-instance-id"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "tiktok-oauth-callback",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "webhook-node",
+      "name": "Webhook - TikTok OAuth",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [260, 300],
+      "webhookId": "your-webhook-id"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"query\"][\"code\"]}}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "check-code-node",
+      "name": "Проверить код",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://business-api.tiktok.com/open_api/v1.3/oauth2/access_token/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "app_id",
+              "value": "ВАШ_APP_ID"
+            },
+            {
+              "name": "secret", 
+              "value": "ВАШ_APP_SECRET"
+            },
+            {
+              "name": "auth_code",
+              "value": "={{$json[\"query\"][\"code\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "exchange-token-node",
+      "name": "Обменять код на токен",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [660, 180]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{$json[\"code\"]}}",
+              "operation": "equal",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "id": "check-success-node",
+      "name": "Проверить успех",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [860, 180]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "collection": "tiktok_tokens",
+        "fields": "access_token,advertiser_ids,created_at",
+        "options": {}
+      },
+      "id": "save-token-node",
+      "name": "Сохранить токен",
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1,
+      "position": [1060, 100],
+      "credentials": {
+        "mongoDb": {
+          "id": "your-mongodb-credentials-id",
+          "name": "MongoDB"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"success\": true, \"message\": \"Токен успешно получен\", \"access_token\": \"{{$json[\\\"data\\\"][\\\"access_token\\\"]}}\", \"advertiser_ids\": {{$json[\"data\"][\"advertiser_ids\"]}} }",
+        "options": {}
+      },
+      "id": "success-response-node",
+      "name": "Успешный ответ",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1260, 100]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"success\": false, \"message\": \"Ошибка при получении токена: {{$json[\\\"message\\\"]}}\" }",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "error-response-node",
+      "name": "Ответ с ошибкой",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1060, 260]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"success\": false, \"message\": \"Код авторизации не найден\" }",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "no-code-response-node",
+      "name": "Нет кода",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [660, 420]
+    }
+  ],
+  "connections": {
+    "Webhook - TikTok OAuth": {
+      "main": [
+        [
+          {
+            "node": "Проверить код",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Проверить код": {
+      "main": [
+        [
+          {
+            "node": "Обменять код на токен",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Нет кода",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Обменять код на токен": {
+      "main": [
+        [
+          {
+            "node": "Проверить успех",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Проверить успех": {
+      "main": [
+        [
+          {
+            "node": "Сохранить токен",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ответ с ошибкой",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Сохранить токен": {
+      "main": [
+        [
+          {
+            "node": "Успешный ответ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "your-version-id",
+  "id": "your-workflow-id",
+  "name": "TikTok OAuth Handler"
+} 
