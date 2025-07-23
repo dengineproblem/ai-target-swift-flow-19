@@ -3,7 +3,7 @@ import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSqua
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
-
+import { HeroGeometric } from '@/components/ui/shape-landing-hero';
 import { NoisePatternCard, NoisePatternCardBody } from '@/components/ui/card-with-noise-pattern';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import SimpleVideoSection from '@/components/ui/simple-video-section';
@@ -244,98 +244,7 @@ const Index = () => {
   };
 
   return <div className="min-h-screen bg-black text-white">
-      {/* Главный экран AI-агентство Performante */}
-      <div className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-indigo-400 to-rose-400 bg-clip-text text-transparent">
-            AI-агентство Performante
-          </h1>
-          <p className="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed">
-            Мы используем искусственный интеллект, чтобы ваши рекламные кампании в TikTok и Instagram приносили максимальную прибыль.
-          </p>
-          <button 
-            className="bg-gradient-to-r from-indigo-600 to-rose-600 hover:from-indigo-700 hover:to-rose-700 text-white px-8 py-4 text-lg rounded-lg shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300 font-semibold"
-            onClick={handleButtonClick}
-          >
-            Записаться на демонстрацию
-          </button>
-        </div>
-      </div>
-
-      {/* О компании */}
-      <div className="relative bg-black">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
-        <div className="container mx-auto px-4 py-20 max-w-4xl relative z-10">
-          <section className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              О компании
-            </h2>
-            <div className="text-white/80 text-lg leading-relaxed space-y-6">
-              <p>
-                AI-агентство Performante основано в 2021 году. Руководитель — Анатолий Степанов, маркетолог с четырёхлетним опытом в реальных проектах. Он владеет всеми современными инструментами онлайн- и офлайн-маркетинга, умеет строить отделы продаж и глубоко анализировать потребности клиентов.
-              </p>
-              <p>
-                Благодаря этому мы создаём эффективные кампании, которые дают реальные результаты, а экспертный подход позволяет принимать точные решения для развития вашего бизнеса.
-              </p>
-            </div>
-          </section>
-
-          {/* Наши услуги */}
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Наши услуги
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-black/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
-                <h3 className="text-xl font-bold text-white mb-3">AI-таргетолог</h3>
-                <p className="text-white/70">
-                  Автоматическая оптимизация бюджета и подбор аудиторий на основе машинного обучения.
-                </p>
-              </div>
-              <div className="bg-black/50 border border-white/10 rounded-xl p-6 hover:border-rose-500/50 transition-all duration-300">
-                <h3 className="text-xl font-bold text-white mb-3">AI-менеджер</h3>
-                <p className="text-white/70">
-                  Система управления кампаниями в реальном времени: запуск, масштабирование и остановка по нужным KPI.
-                </p>
-              </div>
-              <div className="bg-black/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
-                <h3 className="text-xl font-bold text-white mb-3">AI-контент</h3>
-                <p className="text-white/70">
-                  Генерация и тестирование креативов без участия дизайнера — экономия времени и бюджета.
-                </p>
-              </div>
-              <div className="bg-black/50 border border-white/10 rounded-xl p-6 hover:border-rose-500/50 transition-all duration-300">
-                <h3 className="text-xl font-bold text-white mb-3">Запуск и ведение таргетированной рекламы</h3>
-                <p className="text-white/70">
-                  TikTok и Instagram: настройка, аналитика, отчётность и постоянная оптимизация.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Контакты */}
-          <section className="mt-20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
-              Контакты
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-              <div className="bg-black/50 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-white mb-3">Телефон/WhatsApp</h3>
-                <a href="tel:+77058151655" className="text-indigo-400 hover:text-indigo-300 transition-colors text-lg">
-                  +7 705 815 1655
-                </a>
-              </div>
-              <div className="bg-black/50 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-white mb-3">Email</h3>
-                <a href="mailto:business@performanteaiagency.com" className="text-rose-400 hover:text-rose-300 transition-colors text-lg">
-                  business@performanteaiagency.com
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
+      <HeroGeometric badge="ИИ-таргетинг" title1="Заменим вашего таргетолога на ИИ" title2="и удвоим количество заявок при том же бюджете" />
       
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
@@ -461,8 +370,9 @@ const Index = () => {
       
       <footer className="mt-16 pt-8 text-center text-white/40 text-sm space-y-2">
         <div className="space-y-1">
-          <p className="text-white/60 font-medium">ИП Камбалова</p>
-          <p className="text-white/40">БИН: 991211450899</p>
+          <p className="text-white/60 font-medium">ИП «Камбалова»</p>
+          <p className="text-white/40">ИИН: 991211450899</p>
+          <p className="text-white/40">business@performanteaiagency.com</p>
         </div>
         <p>© 2025 Perfomante. Все права защищены.</p>
       </footer>
