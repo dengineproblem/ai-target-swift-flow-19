@@ -301,69 +301,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pricing Section - Тарифы */}
-      <section className="relative overflow-hidden bg-black text-white">
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 md:px-8">
-          <div className="mb-12 space-y-3">
-            <h2 className="text-center text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight text-white">
-              Тарифы
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <PricingCard
-              tier="2 месяца"
-              price="100 000 ₸"
-              bestFor="50 000 ₸/мес"
-              CTA="Выбрать"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Оптимизация по качественным лидам", checked: true },
-                { text: "Оптимизация по окупаемости креативов", checked: true },
-              ]}
-            />
-            <PricingCard
-              tier="6 месяцев"
-              price="240 000 ₸"
-              bestFor="40 000 ₸/мес"
-              CTA="Выбрать"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Оптимизация по качественным лидам", checked: true },
-                { text: "Оптимизация по окупаемости креативов", checked: true },
-              ]}
-              className="border-primary/50 bg-gradient-to-b from-primary/5 to-transparent"
-            />
-            <PricingCard
-              tier="12 месяцев"
-              price="420 000 ₸"
-              bestFor="35 000 ₸/мес"
-              CTA="Выбрать"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Оптимизация по качественным лидам", checked: true },
-                { text: "Оптимизация по окупаемости креативов", checked: true },
-              ]}
-            />
-            <PricingCard
-              tier="Курс «Таргет для предпринимателей»"
-              price="50 000 ₸"
-              bestFor="Доступ навсегда"
-              CTA="Выбрать"
-              benefits={[
-                { text: "Как работает таргетированная реклама FB", checked: true },
-                { text: "Секреты результативных креативов", checked: true },
-                { text: "10 способов снизить стоимость лида", checked: true },
-              ]}
-            />
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section - Часто задаваемые вопросы */}
       <Faq3 {...faqData} />
