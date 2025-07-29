@@ -350,12 +350,12 @@ const Index = () => {
                 { text: "AI-агент для управления рекламными кампаниями", checked: true },
                 { text: "Оптимизация по качественным лидам", checked: true },
                 { text: "Оптимизация по окупаемости креативов", checked: true },
-                { text: "Ежемесячная стратегическая сессия со специалистом по рекламе", checked: true },
-                { text: "3 видео креатива для таргетированной рекламы", checked: true },
-                { text: "20 генераций статичных кретивов", checked: true },
-                { text: "Приоритетная техподдержка", checked: true },
-                { text: "Все новые функции без доплат", checked: true },
-                { text: "Возможность заморозки на 2 месяца", checked: true }
+                { text: "Ежемесячная стратегическая сессия со специалистом по рекламе", checked: true, highlighted: true },
+                { text: "3 видео креатива для таргетированной рекламы", checked: true, highlighted: true },
+                { text: "20 генераций статичных кретивов", checked: true, highlighted: true },
+                { text: "Приоритетная техподдержка", checked: true, highlighted: true },
+                { text: "Все новые функции без доплат", checked: true, highlighted: true },
+                { text: "Возможность заморозки на 2 месяца", checked: true, highlighted: true }
               ]}
             />
           </div>

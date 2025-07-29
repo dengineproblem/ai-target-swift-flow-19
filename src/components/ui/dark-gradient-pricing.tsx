@@ -10,9 +10,10 @@ import { useState } from "react"
 interface BenefitProps {
   text: string
   checked: boolean
+  highlighted?: boolean
 }
 
-const Benefit = ({ text, checked }: BenefitProps) => {
+const Benefit = ({ text, checked, highlighted }: BenefitProps) => {
   return (
     <div className="flex items-center gap-3">
       {checked ? (
@@ -24,7 +25,10 @@ const Benefit = ({ text, checked }: BenefitProps) => {
           <X className="size-3" />
         </span>
       )}
-      <span className="text-sm text-zinc-300">{text}</span>
+      <span className={cn(
+        "text-sm",
+        highlighted ? "text-primary font-medium" : "text-zinc-300"
+      )}>{text}</span>
     </div>
   )
 }
@@ -34,7 +38,7 @@ interface PricingCardProps {
   price: string
   bestFor: string
   CTA: string
-  benefits: Array<{ text: string; checked: boolean }>
+  benefits: Array<{ text: string; checked: boolean; highlighted?: boolean }>
   className?: string
 }
 
