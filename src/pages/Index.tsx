@@ -345,11 +345,7 @@ const Index = () => {
               bestFor="35 000 ₸/мес"
               CTA="Выбрать"
               benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Оптимизация по качественным лидам", checked: true },
-                { text: "Оптимизация по окупаемости креативов", checked: true },
+                { text: "Все то же самое, что и в других тарифах", checked: true },
                 { text: "Ежемесячная стратегическая сессия со специалистом по рекламе", checked: true, highlighted: true },
                 { text: "3 видео креатива для таргетированной рекламы", checked: true, highlighted: true },
                 { text: "20 генераций статичных кретивов", checked: true, highlighted: true },

@@ -27,7 +27,7 @@ const Benefit = ({ text, checked, highlighted }: BenefitProps) => {
       )}
       <span className={cn(
         "text-sm",
-        highlighted ? "text-primary font-medium" : "text-zinc-300"
+        highlighted ? "text-white font-medium" : "text-zinc-300"
       )}>{text}</span>
     </div>
   )
