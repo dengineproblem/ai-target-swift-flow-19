@@ -306,46 +306,51 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-semibold bg-gradient-to-br from-neutral-50 via-neutral-200 to-neutral-400 bg-clip-text text-transparent mb-4">
-              Выберите свой тариф
+              Тарифы
             </h2>
-            <p className="text-neutral-400 text-base lg:text-lg max-w-3xl mx-auto">
-              Прозрачные цены без скрытых платежей. Платите только за результат.
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <PricingCard
-              tier="Месячная подписка"
-              price="75 000 ₸"
-              bestFor="Идеально для тестирования"
-              CTA="Выбрать тариф"
+              tier="2 месяца"
+              price="100 000 ₸"
+              bestFor="50 000 ₸/мес"
+              CTA="Выбрать"
               benefits={[
-                { text: "Настройка ИИ-таргетолога под ваш бизнес", checked: true },
-                { text: "Telegram-бот для запуска рекламы", checked: true },
-                { text: "Мини-приложение с отчетами", checked: true },
-                { text: "Автоматическое управление кампаниями", checked: true },
-                { text: "Ежедневные отчеты в Telegram", checked: true },
-                { text: "Базовая техническая поддержка", checked: true },
-                { text: "Помощник по креативам", checked: true }
+                { text: "AI-агент для написания сценариев для креативов", checked: true },
+                { text: "Доступ к мини-приложению в Telegram", checked: true },
+                { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                { text: "Оптимизация по качественным лидам", checked: true },
+                { text: "Оптимизация по окупаемости креативов", checked: true }
               ]}
             />
             
             <PricingCard
-              tier="Годовая подписка"
-              price="60 000 ₸/мес"
-              bestFor="Максимальная экономия и возможности"
-              CTA="Выбрать тариф"
+              tier="6 месяцев"
+              price="240 000 ₸"
+              bestFor="40 000 ₸/мес"
+              CTA="Выбрать"
               benefits={[
-                { text: "Все возможности месячного тарифа", checked: true },
-                { text: "Скидка 20% при годовой оплате", checked: true },
-                { text: "Ежемесячная стратегическая сессия со специалистом по рекламе", checked: true },
-                { text: "3 видео креатива для таргетированной рекламы", checked: true },
-                { text: "20 генераций статичных кретивов", checked: true },
-                { text: "Приоритетная техподдержка", checked: true },
-                { text: "Все новые функции без доплат", checked: true },
-                { text: "Возможность заморозки на 2 месяца", checked: true }
+                { text: "AI-агент для написания сценариев для креативов", checked: true },
+                { text: "Доступ к мини-приложению в Telegram", checked: true },
+                { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                { text: "Оптимизация по качественным лидам", checked: true },
+                { text: "Оптимизация по окупаемости креативов", checked: true }
               ]}
-              className="border-primary/50 bg-gradient-to-br from-primary/5 to-primary/10"
+            />
+
+            <PricingCard
+              tier="12 месяцев"
+              price="420 000 ₸"
+              bestFor="35 000 ₸/мес"
+              CTA="Выбрать"
+              benefits={[
+                { text: "AI-агент для написания сценариев для креативов", checked: true },
+                { text: "Доступ к мини-приложению в Telegram", checked: true },
+                { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                { text: "Оптимизация по качественным лидам", checked: true },
+                { text: "Оптимизация по окупаемости креативов", checked: true }
+              ]}
             />
           </div>
         </div>
