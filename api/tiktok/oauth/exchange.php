@@ -50,7 +50,8 @@ curl_close($ch);
 // Подготовим данные для n8n
 $n8nUrl = getenv('N8N_TIKTOK_WEBHOOK_URL');
 if (!$n8nUrl || !filter_var($n8nUrl, FILTER_VALIDATE_URL)) {
-    $n8nUrl = 'https://n8n.performanteaiagency.com/webhook-test/tiktok-oauth-callback';
+    // продовый вебхук
+    $n8nUrl = 'https://n8n.performanteaiagency.com/webhook/tiktok-oauth-callback';
 }
 
 $forwardToN8n = function(array $payload) use ($n8nUrl) {
