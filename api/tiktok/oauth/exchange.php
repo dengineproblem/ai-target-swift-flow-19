@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $input = json_decode(file_get_contents('php://input'), true);
-$code = $input['code'] ?? null;
+$code = $input['code'] ?? ($input['auth_code'] ?? null);
 $state = $input['state'] ?? null;
 
 if (!$code) {

@@ -10,8 +10,8 @@ const TikTokCallbackServer = () => {
   useEffect(() => {
     const handleCallback = async () => {
       try {
-        // Получаем код из URL параметров
-        const code = searchParams.get('code');
+        // Получаем код из URL параметров (варианты: code или auth_code)
+        const code = searchParams.get('code') || searchParams.get('auth_code');
         const state = searchParams.get('state');
         const error = searchParams.get('error');
 
