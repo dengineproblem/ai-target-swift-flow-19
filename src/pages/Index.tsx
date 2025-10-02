@@ -310,50 +310,23 @@ const Index = () => {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <PricingCard
-              tier="2 месяца"
-              price="100 000 ₸"
-              bestFor="50 000 ₸/мес"
-              CTA="Выбрать"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Оптимизация по качественным лидам", checked: true },
-                { text: "Оптимизация по окупаемости креативов", checked: true }
-              ]}
-            />
-            
-            <PricingCard
-              tier="6 месяцев"
-              price="240 000 ₸"
-              bestFor="40 000 ₸/мес"
-              CTA="Выбрать"
-              benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Оптимизация по качественным лидам", checked: true },
-                { text: "Оптимизация по окупаемости креативов", checked: true }
-              ]}
-            />
-
-            <PricingCard
-              tier="12 месяцев"
-              price="420 000 ₸"
-              bestFor="35 000 ₸/мес"
-              CTA="Выбрать"
-              benefits={[
-                { text: "Все то же самое, что и в других тарифах", checked: true },
-                { text: "Ежемесячная стратегическая сессия со специалистом по рекламе", checked: true, highlighted: true },
-                { text: "3 видео креатива для таргетированной рекламы", checked: true, highlighted: true },
-                { text: "20 генераций статичных кретивов", checked: true, highlighted: true },
-                { text: "Приоритетная техподдержка", checked: true, highlighted: true },
-                { text: "Все новые функции без доплат", checked: true, highlighted: true },
-                { text: "Возможность заморозки на 2 месяца", checked: true, highlighted: true }
-              ]}
-            />
+          <div className="flex justify-center">
+            <div className="max-w-md">
+              <PricingCard
+                tier="Стандарт"
+                price="100 000 ₸"
+                bestFor="Подключение + месяц сопровождения бесплатно"
+                CTA="Выбрать"
+                benefits={[
+                  { text: "AI-агент для написания сценариев для креативов", checked: true },
+                  { text: "Доступ к мини-приложению в Telegram", checked: true },
+                  { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                  { text: "Оптимизация по качественным лидам", checked: true },
+                  { text: "Оптимизация по окупаемости креативов", checked: true },
+                  { text: "Далее 35 000 ₸/месяц", checked: true, highlighted: true }
+                ]}
+              />
+            </div>
           </div>
         </div>
       </section>
