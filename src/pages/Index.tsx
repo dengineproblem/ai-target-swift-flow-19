@@ -269,7 +269,7 @@ const Index = () => {
       <SimpleVideoSection 
         title="Демонстрация работы системы"
         description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
-        videoSrc="https://www.youtube.com/watch?v=Fs3FWDpcccE"
+        videoSrc="https://www.youtube.com/watch?v=yqBLGudEPTQ&t=32s"
       />
 
       {/* Comparison Dashboard - Выгода от использования ИИ-таргетолога */}
@@ -310,23 +310,21 @@ const Index = () => {
             </h2>
           </div>
           
-          <div className="flex justify-center">
-            <div className="max-w-md">
-              <PricingCard
-                tier="Стандарт"
-                price="100 000 ₸"
-                bestFor="Подключение + месяц сопровождения бесплатно"
-                CTA="Выбрать"
-                benefits={[
-                  { text: "AI-агент для написания сценариев для креативов", checked: true },
-                  { text: "Доступ к мини-приложению в Telegram", checked: true },
-                  { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                  { text: "Оптимизация по качественным лидам", checked: true },
-                  { text: "Оптимизация по окупаемости креативов", checked: true },
-                  { text: "Далее 35 000 ₸/месяц", checked: true, highlighted: true }
-                ]}
-              />
-            </div>
+          <div className="flex justify-center max-w-md mx-auto">
+            <PricingCard
+              tier="1 месяц"
+              price="100 000 ₸"
+              bestFor="Первый месяц"
+              CTA="Выбрать"
+              benefits={[
+                { text: "AI-агент для написания сценариев для креативов", checked: true },
+                { text: "Доступ к мини-приложению в Telegram", checked: true },
+                { text: "AI-агент для управления рекламными кампаниями", checked: true },
+                { text: "Оптимизация по качественным лидам", checked: true },
+                { text: "Оптимизация по окупаемости креативов", checked: true },
+                { text: "Далее 49 000 ₸/мес", checked: true, highlighted: true }
+              ]}
+            />
           </div>
         </div>
       </section>

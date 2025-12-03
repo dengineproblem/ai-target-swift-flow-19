@@ -15,8 +15,8 @@ const data = [
   },
   {
     category: 'ИИ-таргетолог',
-    reklamaBudget: 475,
-    targetologCost: 25,
+    reklamaBudget: 451,
+    targetologCost: 49,
     totalCost: 500,
     leads: 200,
     icon: Bot,
