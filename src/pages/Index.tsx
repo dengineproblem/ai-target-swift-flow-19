@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Check, RocketIcon, Settings, Clock, BrainCircuit, Sparkles, MessageSquarePlus, Banknote, PhoneCall, Target, TrendingUp, Zap } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
@@ -332,7 +333,15 @@ const Index = () => {
       {/* FAQ Section - Часто задаваемые вопросы */}
       <Faq3 {...faqData} />
       
-      <footer className="mt-16 pt-8 text-center text-white/40 text-sm space-y-2">
+      <footer className="mt-16 pt-8 text-center text-white/40 text-sm space-y-4">
+        <div className="flex justify-center gap-6">
+          <Link to="/offer" className="text-white/60 hover:text-white transition-colors">
+            Публичная оферта
+          </Link>
+          <Link to="/privacy" className="text-white/60 hover:text-white transition-colors">
+            Политика конфиденциальности
+          </Link>
+        </div>
         <div className="space-y-1">
           <p className="text-white/60 font-medium">ИП «Камбалова»</p>
           <p className="text-white/40">ИИН: 991211450899</p>
