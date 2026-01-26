@@ -26,7 +26,7 @@ const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const isMobile = useIsMobile();
   const handleButtonClick = () => {
-    window.open('https://n1147100.alteg.io', '_blank', 'noopener,noreferrer');
+    window.open('https://crm.performanteaiagency.com/book/0f559eb0-53fa-4b6a-a51b-5d3e15e5864b', '_blank', 'noopener,noreferrer');
   };
 
   useEffect(() => {
@@ -241,7 +241,7 @@ const Index = () => {
     supportHeading: "Остались вопросы?",
     supportDescription: "Наша команда поддержки готова помочь вам с любыми вопросами или проблемами. Свяжитесь с нами для персональной консультации.",
     supportButtonText: "Записаться на демонстрацию",
-    supportButtonUrl: "https://n1147100.alteg.io",
+    supportButtonUrl: "https://crm.performanteaiagency.com/book/0f559eb0-53fa-4b6a-a51b-5d3e15e5864b",
   };
 
   return <div className="min-h-screen bg-black text-white">

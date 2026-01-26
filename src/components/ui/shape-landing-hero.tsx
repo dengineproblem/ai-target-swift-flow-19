@@ -78,7 +78,7 @@ function HeroGeometric({
   };
 
   const handleButtonClick = () => {
-    window.open('https://n1147100.alteg.io', '_blank', 'noopener,noreferrer');
+    window.open('https://crm.performanteaiagency.com/book/0f559eb0-53fa-4b6a-a51b-5d3e15e5864b', '_blank', 'noopener,noreferrer');
   };
 
   return <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
