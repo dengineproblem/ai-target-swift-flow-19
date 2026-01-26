@@ -59,19 +59,19 @@ const Index = () => {
       content: (
         <div>
           <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
-            Вы загружаете видео через приложение в Telegram, выбираете все настройки и нажимаете кнопку "Запустить". 
-            После этого автоматически создаются кампания, группа объявлений и объявления на ваш продукт.
+            Загружаете видео или изображения через веб-приложение, выбираете настройки и нажимаете «Запустить».
+            Автоматически создаются кампания, группа объявлений и объявления на ваш продукт.
           </p>
         </div>
       ),
     },
     {
-      title: "Мониторинг и управление", 
+      title: "ROI аналитика",
       content: (
         <div>
           <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
-            Вы следите за статистикой в приложении, можете самостоятельно выключать кампании в один клик, 
-            включать их, а также управлять бюджетом и видеть графики за любой отчетный период.
+            Отслеживайте доходность по каждому креативу в реальном времени. Система автоматически рассчитывает ROI,
+            показывает какие креативы приносят прибыль, а какие — убытки. Данные синхронизируются с вашей CRM.
           </p>
         </div>
       ),
@@ -81,21 +81,9 @@ const Index = () => {
       content: (
         <div>
           <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
-            Вы можете доверить искусственному интеллекту управление бюджетом. Включите функцию "Автопилот" — 
-            он будет ориентироваться на целевые показатели именно вашего бизнеса, не выходить за рамки 
-            обговоренного дневного бюджета и автоматически перераспределять бюджет в сторону более эффективных кампаний.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Ежедневная отчетность",
-      content: (
-        <div>
-          <p className="text-white/60 text-xs md:text-sm font-normal mb-4">
-            Ежедневно после полуночи берется отчет с рекламного кабинета, и на основании целевых показателей 
-            бизнеса производятся действия. Вы получаете утром в Telegram отчет со всеми ключевыми метриками 
-            и выполненными действиями.
+            Доверьте искусственному интеллекту управление бюджетом. Автопилот ориентируется на целевые показатели
+            вашего бизнеса, не выходит за рамки дневного бюджета и автоматически перераспределяет деньги
+            в сторону более эффективных кампаний.
           </p>
         </div>
       ),
@@ -105,9 +93,9 @@ const Index = () => {
       content: (
         <div>
           <p className="text-white/60 text-xs md:text-sm font-normal">
-            Вы также можете попросить чат-бот написать новый сценарий креатива. У него будет вся информация 
-            о вашем бизнесе, примеры форматов креативов, описаны все боли и сегменты целевых аудиторий. 
-            Это делает его способным писать максимально релевантные креативы для вашей аудитории.
+            AI создаёт готовые рекламные картинки, карусели и сценарии для видео. У него вся информация
+            о вашем бизнесе, боли и сегменты аудиторий — это позволяет генерировать максимально релевантные
+            креативы в один клик.
           </p>
         </div>
       ),
@@ -205,7 +193,7 @@ const Index = () => {
       {
         id: "faq-7",
         question: "Сколько времени занимает настройка и запуск?",
-        answer: "После оплаты мы настраиваем систему под ваш бизнес за 1-2 дня. Вы получаете доступ к Telegram-боту, и можете сразу начинать запускать рекламу."
+        answer: "После оплаты мы настраиваем систему под ваш бизнес за 1-2 дня. Вы получаете доступ к веб-приложению и можете сразу начинать запускать рекламу."
       },
       {
         id: "faq-8",
@@ -246,7 +234,14 @@ const Index = () => {
 
   return <div className="min-h-screen bg-black text-white">
       <HeroGeometric badge="ИИ-таргетинг" title1="Заменим вашего таргетолога на ИИ" title2="и удвоим количество заявок при том же бюджете" />
-      
+
+      {/* Simple Video Section */}
+      <SimpleVideoSection
+        title="Демонстрация работы системы"
+        description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
+        videoSrc="https://www.youtube.com/watch?v=yqBLGudEPTQ&t=32s"
+      />
+
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.02] via-transparent to-rose-500/[0.02] blur-3xl" />
         
@@ -258,7 +253,7 @@ const Index = () => {
               <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-2 lg:gap-4">
                 <GridItem title="Что это" description="ИИ-система, которая полностью заменяет таргетолога. Вы платите только за рекламу — и весь бюджет работает на вас." />
                 <GridItem title="Как это устроено" description="Каждый день система анализирует результаты, сравнивает с целевыми показателями и автоматически включает/выключает кампании, перераспределяет бюджеты, масштабирует лучшие связки." />
-                <GridItem title="Как запустить рекламу" description="Достаточно отправить видео или фото в Telegram-бот, дальше всё делается автоматически. Также под каждого клиента мы создаём мини-приложение в Telegram с отчётами и ручным управлением при необходимости." />
+                <GridItem title="Как запустить рекламу" description="Загружаете креативы через веб-приложение, выбираете настройки и нажимаете «Запустить». Единое приложение для всех клиентов с полным контролем и аналитикой в одном месте." />
                 <GridItem title="Сравнение с человеком" description="AI-таргетолог показал на 20% лучшие результаты при том же бюджете и тех же креативах." />
               </ul>
             </section>
@@ -266,18 +261,58 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Simple Video Section */}
-      <SimpleVideoSection 
-        title="Демонстрация работы системы"
-        description="Посмотрите, как наша ИИ-система анализирует кампании, оптимизирует бюджеты и повышает эффективность рекламы в режиме реального времени."
-        videoSrc="https://www.youtube.com/watch?v=yqBLGudEPTQ&t=32s"
-      />
-
       {/* Comparison Dashboard - Выгода от использования ИИ-таргетолога */}
       <ComparisonDashboard />
 
       {/* Timeline Section - Как работает ИИ-таргетолог */}
       <Timeline data={timelineData} />
+
+      {/* AI Creatives Examples Section */}
+      <section className="relative bg-black py-20">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-semibold bg-gradient-to-br from-neutral-50 via-neutral-200 to-neutral-400 bg-clip-text text-transparent mb-4">
+              Примеры AI-креативов
+            </h2>
+            <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
+              Наш AI генерирует готовые рекламные изображения для любой ниши. Вот несколько примеров креативов, созданных системой.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative group">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                <img
+                  src="/creative-dental.png"
+                  alt="AI креатив для стоматологии"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <p className="text-center text-white/60 text-sm mt-3">Стоматология</p>
+            </div>
+            <div className="relative group">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                <img
+                  src="/creative-taxi.png"
+                  alt="AI креатив для такси"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <p className="text-center text-white/60 text-sm mt-3">Такси / Водители</p>
+            </div>
+            <div className="relative group">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                <img
+                  src="/creative-fitness.png"
+                  alt="AI креатив для фитнеса"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <p className="text-center text-white/60 text-sm mt-3">Фитнес / Похудение</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Client Reports Section - Результаты наших клиентов */}
       <ClientReports />
@@ -310,20 +345,47 @@ const Index = () => {
               Тарифы
             </h2>
           </div>
-          
-          <div className="flex justify-center max-w-md mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <PricingCard
               tier="1 месяц"
-              price="100 000 ₸"
-              bestFor="Первый месяц"
+              price="49 000 ₸"
+              bestFor="Попробовать"
               CTA="Выбрать"
               benefits={[
-                { text: "AI-агент для написания сценариев для креативов", checked: true },
-                { text: "Доступ к мини-приложению в Telegram", checked: true },
-                { text: "AI-агент для управления рекламными кампаниями", checked: true },
-                { text: "Оптимизация по качественным лидам", checked: true },
-                { text: "Оптимизация по окупаемости креативов", checked: true },
-                { text: "Далее 49 000 ₸/мес", checked: true, highlighted: true }
+                { text: "Генерация креативов (картинки, карусели, сценарии)", checked: true },
+                { text: "Доступ к веб-приложению", checked: true },
+                { text: "AI-агент для управления рекламой", checked: true },
+                { text: "ROI аналитика по креативам", checked: true },
+                { text: "Интеграция с CRM (AmoCRM, Bitrix24)", checked: true },
+                { text: "Отслеживание и анализ креативов конкурентов", checked: true },
+                { text: "AI-чат для анализа и рекомендаций", checked: true }
+              ]}
+            />
+            <PricingCard
+              tier="3 месяца"
+              price="99 000 ₸"
+              bestFor="Выгодно"
+              CTA="Выбрать"
+              benefits={[
+                { text: "Всё из тарифа «1 месяц»", checked: true },
+                { text: "Экономия 48 000 ₸", checked: true, highlighted: true },
+                { text: "Приоритетная поддержка", checked: true },
+                { text: "33 000 ₸/мес вместо 49 000 ₸", checked: true, highlighted: true }
+              ]}
+            />
+            <PricingCard
+              tier="1 год"
+              price="299 000 ₸"
+              bestFor="Максимум"
+              CTA="Выбрать"
+              benefits={[
+                { text: "Всё из тарифа «3 месяца»", checked: true },
+                { text: "Экономия 289 000 ₸", checked: true, highlighted: true },
+                { text: "Персональный менеджер", checked: true },
+                { text: "Индивидуальные доработки", checked: true },
+                { text: "Обучение команды", checked: true },
+                { text: "25 000 ₸/мес вместо 49 000 ₸", checked: true, highlighted: true }
               ]}
             />
           </div>
